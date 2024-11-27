@@ -1,0 +1,49 @@
+WEB
+- Coherencia
+- UI/UX
+- Paleta de Colores
+- Uniformidad
+- Responsive
+- Imágenes proporcionales
+- Sinceridad
+- Conciso
+
+OBLIGATORIO
+- Nombre
+- Habilidad principal
+- Contacto (email)
+- CV (pdf). Mejor que se pueda ver y descargar
+- Proyectos Principales
+	- Descripción
+	- Tecnologías
+	- Imagen
+	- Código
+- Habilidades técnicas categorizadas
+- Experiencia laboral
+- Formación
+
+RECOMENDABLE
+- Github/LinkedIn
+- Foto
+- Otros Proyectos
+- Habilidades blandas
+- Dominio personalizado
+
+OPCIONAL
+- Dark/Light
+- Idiomas
+- Estoy aprendiendo...
+- Aficiones
+- Divulgación
+- Contribuciones
+- Reconocimientos
+- Participación en eventos (Hackaton, Game Jam...)
+- Certificaciones
+
+DESACONSEJADO
+- Redes Sociales
+- Proyectos que no reflejen vuestro conocimiento
+- Exceso de Texto
+- Exceso de conocimientos
+- Redundancia
+- Información Irrelevante
