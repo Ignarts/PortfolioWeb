@@ -1,0 +1,13 @@
+.title{
+    color: #e69539;
+    font-size: 1.5rem;
+    margin: 1.5rem;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 0.2rem;
+
+}
+
+.bold-title{
+    color: #ffa135;
+}
