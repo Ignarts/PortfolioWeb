@@ -9,7 +9,6 @@
 .profile-container {
     width: 80%;
     max-width: 800px;
-    min-width: 400px;
     margin: 2rem auto;
     padding: 2rem;
     background-color: #171F26;
@@ -224,7 +223,35 @@
     }
 }
 
-@media (width < 400px) {
+@media(width < 730px){
+    .box{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box-icon {
+        width: 70%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .interactive-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box-icon {
+        width: 70%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (width < 430px) {
+    .profile-container{
+        min-width: 250px;
+    }
+
     .profile-pic {
         width: 80px;
         height: 80px;
@@ -268,5 +295,13 @@
 
     .box-info {
         font-size: 0.9rem;
+    }
+
+    .box-icon {
+        width: 100%;
+    }
+
+    .box-icon-svg{
+        width: 50%;
     }
 }
