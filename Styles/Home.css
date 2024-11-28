@@ -163,6 +163,20 @@
     background-color: #ff8c00;
 }
 
+.extra-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.extra-links img {
+    width: 25px;
+    height: 25px;
+    filter: invert(1);
+}
+
 @media (width < 895px) {
     .profile-pic {
         width: 80px;
