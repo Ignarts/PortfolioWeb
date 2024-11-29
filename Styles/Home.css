@@ -91,6 +91,15 @@
     border: 1px solid #ffa135;
 }
 
+.interactive-box:hover{
+    cursor: pointer;
+}
+
+.interactive-link {
+    text-decoration: none;
+    display: block;
+}
+
 .box-icon {
     width: 8rem;
     height: 8rem;
