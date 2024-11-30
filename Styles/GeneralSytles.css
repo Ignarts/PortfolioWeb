@@ -58,6 +58,11 @@ footer a{
     color: #ffa135;
     text-decoration: none;
     font-weight: bold;
+    font-size: .8rem;
+}
+
+footer p{    
+    font-size: .8rem;
 }
 
 /* Scrollbar Style */
