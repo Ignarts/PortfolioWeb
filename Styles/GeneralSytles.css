@@ -45,3 +45,42 @@ p{
 strong{
     color: #ffa135;
 }
+
+footer{
+    background-color: #171F26;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+footer a{
+    color: #ffa135;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Scrollbar Style */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+/* Scrollbar Background */
+::-webkit-scrollbar-track {
+    background: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Thumb settings */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #f39c12, #d35400);
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Hover over Thum */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #f1c40f, #e67e22);
+}
