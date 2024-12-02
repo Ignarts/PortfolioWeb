@@ -152,7 +152,10 @@
     color: #8f8f8f;
 }
 
-.cv{
+.cv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 3.5rem;
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
@@ -160,8 +163,15 @@
     font-size: 0.95rem;
 }
 
+.cv img {
+    width: 1.5rem;
+}
+
 .cv a {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem; /* Optional: Adjust the gap between the image and text */
     width: 50%;
     height: 80%;
     border-radius: 1rem;
@@ -170,7 +180,6 @@
     font-weight: bold;
     font-size: 1rem;
     text-align: center;
-    line-height: 2.8rem;
     color: #171F26;
     text-decoration: none;
     font-family: 'Roboto Slab', sans-serif;
@@ -198,6 +207,7 @@
     .profile-pic {
         width: 80px;
         height: 80px;
+        border-radius: 50%;
     }
 
     .profile-info h1 {
@@ -271,8 +281,9 @@
     }
 
     .profile-pic {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
     }
 
     .profile-info h1 {
