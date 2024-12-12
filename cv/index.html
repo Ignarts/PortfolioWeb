@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ignacio Meléndez - Portfolio</title>
-    <link rel="icon" href="./Resources/Home/Images/avatar.jpg">
-    <link rel="stylesheet" href="./Styles/GeneralSytles.css">
-    <link rel="stylesheet" href="./Styles/HeaderTitle.css">
-    <link rel="stylesheet" href="./Styles/Home.css">
+    <link rel="icon" href="../Resources/Home/Images/avatar.jpg">
+    <link rel="stylesheet" href="../Styles/GeneralSytles.css">
+    <link rel="stylesheet" href="../Styles/HeaderTitle.css">
+    <link rel="stylesheet" href="../Styles/Home.css">
 </head>
 
 <body>
@@ -21,15 +21,15 @@
 
         <section class="profile-container">
             <section class="profile-header">
-                <img src="./Resources/Home/Images/avatar.jpg" alt="Foto de perfil" class="profile-pic">
+                <img src="../Resources/Home/Images/avatar.jpg" alt="Foto de perfil" class="profile-pic">
                 <article class="profile-info">
                     <h1>Ignacio Meléndez</h1>
                     <p class="username">@ignartsdev</p>
                     <div class="social-links">
-                        <a href="https://github.com/Ignarts" target="_blank"><img src="./Resources/Home/SVG/github.svg"
+                        <a href="https://github.com/Ignarts" target="_blank"><img src="../Resources/Home/SVG/github.svg"
                                 alt="GitHub"></a>
                         <a href="https://www.linkedin.com/in/ignaciomelendezuriz/" target="_blank"><img
-                                src="./Resources/Home/SVG/linkedin.svg" alt="LinkedIn"></a>
+                                src="../Resources/Home/SVG/linkedin.svg" alt="LinkedIn"></a>
                     </div>
                 </article>
             </section>
@@ -51,9 +51,9 @@
             </section>
 
             <section class="cv">
-                <a href="./Resources/Home/PDF/IgnacioMelendez_UnityDeveloper_web.pdf" class="cv-button"
+                <a href="../Resources/Home/PDF/IgnacioMelendez_UnityDeveloper_web.pdf" class="cv-button"
                     target="_blank">
-                    <img src="./Resources/Home/SVG/cv-icon.svg" alt="cv-icon">
+                    <img src="../Resources/Home/SVG/cv-icon.svg" alt="cv-icon">
                     Download CV
                 </a>
             </section>
@@ -62,7 +62,7 @@
                 <h2>Work Experience</h2>
                 <div class="box interactive-box" data-url="https://store.epicgames.com/es-ES/p/racerloop-4d3ab2">
                     <div class="box-icon">
-                        <img src="./Resources/Home/Images/Racerloop.jpg" alt="Otter's Hell">
+                        <img src="../Resources/Home/Images/Racerloop.jpg" alt="Otter's Hell">
                     </div>
                     <div>
                         <p class="box-title">Unity Multiplayer Developer</p>
@@ -76,7 +76,7 @@
 
                 <div class="box">
                     <div class="box-icon">
-                        <img src="./Resources/Home/Images/OttersHell.png" alt="Racerloop">
+                        <img src="../Resources/Home/Images/OttersHell.png" alt="Racerloop">
                     </div>
                     <div>
                         <p class="box-title">Junior Unity Developer</p>
@@ -90,7 +90,7 @@
                 <h2>Studies</h2>
                 <div class="box">
                     <div class="box-icon-svg">
-                        <img src="./Resources/Home/SVG/code-icon.svg" alt="Studies Icon">
+                        <img src="../Resources/Home/SVG/code-icon.svg" alt="Studies Icon">
                     </div>
                     <div>
                         <p class="box-title">Master's Degree on Full-Stack Development</p>
@@ -100,7 +100,7 @@
 
                 <div class="box">
                     <div class="box-icon-svg">
-                        <img src="./Resources/Home/SVG/education-cap.svg" alt="Studies Icon">
+                        <img src="../Resources/Home/SVG/education-cap.svg" alt="Studies Icon">
                     </div>
                     <div>
                         <p class="box-title">Professional Training in<br>Multiplatform Application Development</p>
@@ -110,7 +110,7 @@
 
                 <div class="box">
                     <div class="box-icon-svg">
-                        <img src="./Resources/Home/SVG/education-cap.svg" alt="Studies Icon">
+                        <img src="../Resources/Home/SVG/education-cap.svg" alt="Studies Icon">
                     </div>
                     <div>
                         <p class="box-title">Pearson BTEC Level 5<br>Higher National Diploma in Game Development</p>
@@ -124,11 +124,11 @@
                 <a href="mailto:ignarts.dev@gmail.com" class="cv-button" target="_blank">Send Mail</a>
             </section>
             <section class="extra-links">
-                <a href="mailto:ignarts.dev@gmail.com" target="_blank"><img src="./Resources/Home/SVG/mail-to.svg"
+                <a href="mailto:ignarts.dev@gmail.com" target="_blank"><img src="../Resources/Home/SVG/mail-to.svg"
                         alt="mailto"></a>
                 <a href="https://www.linkedin.com/in/ignaciomelendezuriz/" target="_blank"><img
-                        src="./Resources/Home/SVG/linkedin.svg" alt="LinkedIn"></a>
-                <a href="https://github.com/Ignarts" target="_blank"><img src="./Resources/Home/SVG/github.svg"
+                        src="../Resources/Home/SVG/linkedin.svg" alt="LinkedIn"></a>
+                <a href="https://github.com/Ignarts" target="_blank"><img src="../Resources/Home/SVG/github.svg"
                         alt="GitHub"></a>
             </section>
         </section>
@@ -147,6 +147,13 @@
     </main>
 </body>
 
-<script src="./Code/InteractiveElement.js"></script>
+<script src="../Code/InteractiveElement.js"></script>
+<script>
+    window.onload = function () {
+        if (window.location.pathname !== "/cv" && !window.location.pathname.startsWith("/cv/")) {
+            window.location.replace("/cv");  // Redirige a la carpeta sin mostrar 'index.html'
+        }
+    };
+</script>
 
 </html>
