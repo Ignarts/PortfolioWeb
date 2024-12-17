@@ -18,13 +18,8 @@
 
         <section class="blog-article">
             <section class="blog-title">
-                <span class="blog-title-text">
-                    <h1><strong>S.O.L.I.D</strong> Principle<br>in Videogames</h1>
-                    <h3>Designing Flexible and<br>Maintainable Game Code</h3>
-                </span>
-                <span class="blog-date">
-                    <p>12/19/2024</p>
-                </span>
+                <h1><strong>S.O.L.I.D</strong> Principle<br>in Videogames</h1>
+                <h3>Designing Flexible and Maintainable Game Code</h3>
             </section>
             <section class="blog-tags">
                 <span class="blog-tag">C#</span>
@@ -33,15 +28,102 @@
                 <span class="blog-tag">PROGRAMMING PATTERNS</span>
             </section>
 
+            <hr>
+
+            <img src="./Resources/SOLIDPrinciple.png" alt="SOLID_LOGO" class="blog-image">
+
             <section class = "blog-content">
                 <p>In video game development, the application of SOLID software design principles creates cleaner,
                     more manageable code. These five object-oriented principles (Single Responsibility, Open-Closed,
                     Liskov Substitution, Interface Segregation, and Dependency Inversion) allow developers to create
                     flexible, modular systems that can easily adapt to changes during the game's lifecycle.
                     The goal of these 5 principles when writing code are:</p>
+                <ul>
+                    <li><strong>Create efficient software</strong>: that delivers what it is intended to do and that
+                        is robust and stable.</li>
+                    <li><strong>Write code that is clean and flexible to change</strong>: that can be easily modified
+                        as needed and that is reusable and maintainable.</li>
+                    <li><strong>Allow scalability</strong>: that accepts to be extended with new functionalities in
+                        an agile way.</li>
+                </ul>
+                <p>In short, develop quality software.</p>
+
+                <hr class="left-hr">
+
+                <h3>1. Single Responsibility Principle (SRP)</h3>
+                <h4>"A class should have one, and only one, reason to change"</h4>
+                <p><strong>Single Responsibility Principle (SRP)</strong> states that each class should have only
+                    one reason to change. In a game, this could mean separating character movement from attack behavior.</p>
+                <p>By isolating these responsibilities, you make the game’s code more flexible and reduce errors when
+                    new features are added. Imagine having your game character’s abilities split into separate
+                    components —jump, sprint, attack— each with its own code, enabling seamless adjustments without
+                    risking other gameplay features.</p>
+                
+                <img src="./Resources/ExampleSRP.png" alt="SOLID_LOGO" class="blog-image">
+
+                <h3>2. Open-Closed Principle (OCP)</h3>
+                <h4>"You should be able to extend a classes behaviour without modifying it"</h4>
+                <p>The <strong>Open-Closed Principle (OCP)</strong> suggests that code should be open
+                    for extension but closed for modification. In game updates, you might add new enemy behaviors
+                    without altering existing code, reducing bugs and unexpected effects.</p>
+                <p>For example,by implementing a modular enemy AI, you can create different attack patterns for various
+                    enemies by adding new classes, keeping the base enemy class intact.</p>
+                
+                <img src="./Resources/ExampleOCP.png" alt="SOLID_LOGO" class="blog-image">
+
+                <h3>3. Liskov Substitution Principle (LSP)</h3>
+                <h4>"Derived classes must be substitutable for their base classes"</h4>
+                <p>The <strong>Liskov Substitution Principle (LSP)</strong> states that subclasses
+                    should be substitutable for their base classes without altering program behavior.</p>
+                <p>This principleis critical in games for things like weapons or player abilities. If a player 
+                    character can switch between different abilities (e.g., fireball vs. ice blast), each ability
+                    should work consistently within the character’s general actions without causing unexpected 
+                    results.</p>
+                
+                <img src="./Resources/ExampleLSP.png" alt="SOLID_LOGO" class="blog-image">
+
+                <h3>4. Interface Segregation Principle (ISP)</h3>
+                <h4>"Make fine grained interfaces that are client specific"</h4>
+                <p>The <strong>Interface Segregation Principle (ISP)</strong> focuses on keeping
+                    interfaces small and focused. In a game, this could mean creating separate interfaces for
+                    different character abilities (e.g., IMovable for movement, IAttackable for attacks), enabling
+                    developers to assign only the necessary behaviors to different character types, thus avoiding
+                    bloat and unnecessary dependencies.
+                
+                <img src="./Resources/ExampleISP.png" alt="SOLID_LOGO" class="blog-image">
+
+                <h3>5. Dependency Inversion Principle (DIP)</h3>
+                <h4>"A class should have one, and only one, reason to change"</h4>
+                <p>The <strong>Dependency Inversion Principle (DIP)</strong> aims to reduce tight
+                    coupling by depending on abstractions rather than concrete implementations.</p>
+                <p>For instance, if
+                    your game has an audio system, depending on an interface (IAudioSystem) rather than a concrete
+                    class allows you to swap the audio system with minimal effort, even in the late stages of
+                    development.</p>
+                
+                <img src="./Resources/ExampleDIP.png" alt="SOLID_LOGO" class="blog-image">
+
+                <p>In conclusion, applying the SOLID principles in game development brings a powerful approach to
+                    designing modular, scalable, and maintainable code. By keeping the codebase clean and adaptable,
+                    developers can introduce new features, fix bugs, and make gameplay adjustments without risking
+                    other parts of the game. SOLID principles not only make development smoother but also improve the
+                    game's stability and quality over time, which is critical in delivering a memorable gaming
+                    experience.</p>
             </section>
         </section>
     </main>
+
+    <footer>
+        <p class="footer-text">&copy; 2024 Ignarts. All rights reserved.</p>
+        <p class="footer-text">
+            Created with passion by <strong>Ignacio Meléndez Uriz</strong>,
+            videogame and multiplatform application developer and creativity lover.
+        </p>
+        <p class="footer-text">
+            Do you have an interesting project? Let's talk!
+            <a href="mailto:ignarts.dev@gmail.com" target="_blank">ignarts.dev@gmail.com</a>
+        </p>
+    </footer>
 
 </body>
 </html>

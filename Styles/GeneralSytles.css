@@ -42,6 +42,12 @@ p{
     font-family: 'Roboto', sans-serif;
 }
 
+li{
+    color: #BDB6AF;
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
 strong{
     color: #ffa135;
 }
