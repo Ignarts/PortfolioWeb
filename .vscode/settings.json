@@ -2,6 +2,8 @@
     "cSpell.words": [
         "multiplatform",
         "Racerloop",
-        "Roguelite"
-    ]
+        "Roguelite",
+        "Videogames"
+    ],
+    "livePreview.defaultPreviewPath": "/portfolio.html"
 }
