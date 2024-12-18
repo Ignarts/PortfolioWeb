@@ -51,6 +51,7 @@
     font-size: 0.9rem;
     font-weight: bold;
     text-align: center;
+    justify-items: center;
     font-family: 'Roboto Slab', sans-serif;
 }
 
@@ -75,6 +76,7 @@
     margin-top: -1rem;
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 hr{
@@ -102,7 +104,7 @@ hr{
 .table-of-contents {
     position: fixed;
     top: 6rem;
-    left: 87rem;
+    right: 2%;
     background-color: #171F26;
     border: 1px solid #FFA500;
     padding: 10px 20px;
@@ -142,4 +144,57 @@ hr{
 
 .anchor {
     scroll-margin-top: 8rem;
+}
+
+/* Media Queries */
+@media (width < 1450px) {
+    .blog-tags{
+        display: none;
+    }
+
+    .table-of-contents{
+        display: none;
+    }
+}
+
+@media (width < 895px) {
+    .blog-title h1{
+        font-size: 1.4rem;
+    }
+
+    .blog-title h3{
+        font-size: 1.2rem;
+    }
+    
+    .blog-image{
+        min-width: 15rem;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 1rem 0;
+    }
+    
+    p{
+        font-size: 1rem;
+    }
+
+    .blog-content li{
+        font-size: 1rem;
+    }
+}
+
+
+@media (width < 730px) {
+    .blog-image{
+        min-width: 8rem;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 1rem 0;
+    }
+
+    .blog-content h4{
+        font-size: 0.8rem;
+    }
 }
