@@ -97,6 +97,38 @@ hr{
     justify-content: center;
     margin: 0 auto;
     padding: 1rem 0;
+    transition: transform 0.25s ease;
+}
+
+.blog-image:hover{
+    cursor: pointer;
+}
+
+.blog-image.enlarged {
+    transform: scale(2);
+    max-width: 20rem;
+    top:5.5rem;
+    z-index: 1000;
+    position: relative;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    display: none;
+}
+
+.overlay.active {
+    display: block;
+}
+
+body.no-scroll {
+    overflow: hidden;
 }
 
 /* Table of Contents */
