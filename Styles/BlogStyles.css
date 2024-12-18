@@ -158,9 +158,6 @@ hr{
 }
 
 @media (width < 895px) {
-    .blog-article{
-        width: 100%;
-    }
 
     .blog-title h1{
         font-size: 1.4rem;
@@ -200,5 +197,12 @@ hr{
 
     .blog-content h4{
         font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px){
+
+    .blog-article{
+        width: 90%;
     }
 }
