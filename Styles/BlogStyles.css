@@ -96,3 +96,50 @@ hr{
     margin: 0 auto;
     padding: 1rem 0;
 }
+
+/* Table of Contents */
+
+.table-of-contents {
+    position: fixed;
+    top: 6rem;
+    left: 87rem;
+    background-color: #171F26;
+    border: 1px solid #FFA500;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    min-width: 15rem;
+}
+
+.table-of-contents h3 {
+    margin: 0;
+    font-size: 1.2em;
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+.table-of-contents ul {
+    list-style: none;
+    padding: 0;
+}
+
+.table-of-contents li a {
+    margin: 5px 0;
+    font-size: .9em;
+    color: #57DDA4;
+    font-family: 'Roboto Slab', sans-serif;
+    text-decoration: none;
+}
+
+.table-of-contents li a:hover{
+    color: #FFA500;
+    cursor: pointer;
+}
+
+.table-of-contents ol li{
+    font-size: 1em;
+    padding: 0;
+}
+
+.anchor {
+    scroll-margin-top: 8rem;
+}

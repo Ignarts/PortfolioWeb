@@ -72,6 +72,10 @@
     font-size: 0.95rem;
 }
 
+.description p{
+    text-align: center;
+}
+
 .stat-link{
     text-decoration: none;
     color: #BDB6AF;

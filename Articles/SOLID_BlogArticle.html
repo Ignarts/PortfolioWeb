@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOLID in Videogames</title>
+    <link rel="icon" href="../Resources/Home/Images/avatar.jpg">
     <link rel="stylesheet" href="../../Styles/GeneralSytles.css">
     <link rel="stylesheet" href="../../Styles/HeaderTitle.css">
     <link rel="stylesheet" href="../../Styles/BlogStyles.css">
@@ -17,7 +18,7 @@
         <section class="header-Space"></section>
 
         <section class="blog-article">
-            <section class="blog-title">
+            <section class="blog-title anchor" id="intro">
                 <h1><strong>S.O.L.I.D</strong> Principle<br>in Videogames</h1>
                 <h3>Designing Flexible and Maintainable Game Code</h3>
             </section>
@@ -50,7 +51,7 @@
 
                 <hr class="left-hr">
 
-                <h3>1. Single Responsibility Principle (SRP)</h3>
+                <h3 id="srp" class="anchor">1. Single Responsibility Principle (SRP)</h3>
                 <h4>"A class should have one, and only one, reason to change"</h4>
                 <p><strong>Single Responsibility Principle (SRP)</strong> states that each class should have only
                     one reason to change. In a game, this could mean separating character movement from attack behavior.</p>
@@ -61,7 +62,7 @@
                 
                 <img src="./Resources/ExampleSRP.png" alt="SOLID_LOGO" class="blog-image">
 
-                <h3>2. Open-Closed Principle (OCP)</h3>
+                <h3 id="ocp" class="anchor">2. Open-Closed Principle (OCP)</h3>
                 <h4>"You should be able to extend a classes behaviour without modifying it"</h4>
                 <p>The <strong>Open-Closed Principle (OCP)</strong> suggests that code should be open
                     for extension but closed for modification. In game updates, you might add new enemy behaviors
@@ -71,7 +72,7 @@
                 
                 <img src="./Resources/ExampleOCP.png" alt="SOLID_LOGO" class="blog-image">
 
-                <h3>3. Liskov Substitution Principle (LSP)</h3>
+                <h3 id="lsp" class="anchor">3. Liskov Substitution Principle (LSP)</h3>
                 <h4>"Derived classes must be substitutable for their base classes"</h4>
                 <p>The <strong>Liskov Substitution Principle (LSP)</strong> states that subclasses
                     should be substitutable for their base classes without altering program behavior.</p>
@@ -82,7 +83,7 @@
                 
                 <img src="./Resources/ExampleLSP.png" alt="SOLID_LOGO" class="blog-image">
 
-                <h3>4. Interface Segregation Principle (ISP)</h3>
+                <h3 id="isp" class="anchor">4. Interface Segregation Principle (ISP)</h3>
                 <h4>"Make fine grained interfaces that are client specific"</h4>
                 <p>The <strong>Interface Segregation Principle (ISP)</strong> focuses on keeping
                     interfaces small and focused. In a game, this could mean creating separate interfaces for
@@ -92,7 +93,7 @@
                 
                 <img src="./Resources/ExampleISP.png" alt="SOLID_LOGO" class="blog-image">
 
-                <h3>5. Dependency Inversion Principle (DIP)</h3>
+                <h3 id="dip" class="anchor">5. Dependency Inversion Principle (DIP)</h3>
                 <h4>"A class should have one, and only one, reason to change"</h4>
                 <p>The <strong>Dependency Inversion Principle (DIP)</strong> aims to reduce tight
                     coupling by depending on abstractions rather than concrete implementations.</p>
@@ -103,7 +104,7 @@
                 
                 <img src="./Resources/ExampleDIP.png" alt="SOLID_LOGO" class="blog-image">
 
-                <p>In conclusion, applying the SOLID principles in game development brings a powerful approach to
+                <p id="conclusion">In conclusion, applying the SOLID principles in game development brings a powerful approach to
                     designing modular, scalable, and maintainable code. By keeping the codebase clean and adaptable,
                     developers can introduce new features, fix bugs, and make gameplay adjustments without risking
                     other parts of the game. SOLID principles not only make development smoother but also improve the
@@ -111,6 +112,23 @@
                     experience.</p>
             </section>
         </section>
+
+        <div class="table-of-contents" class="anchor">
+            <h3><strong>S.O.L.I.D</strong> Principle in<br>Videogames</h3>
+            <ol>
+                <li><a href="#intro">SOLID Introduction</a></li>
+                <li><a href="#srp">SOLID Principles</a>
+                    <ol>
+                        <li><a href="#srp">Single Responsibility</a></li>
+                        <li><a href="#ocp">Open-Closed Principle</a></li>
+                        <li><a href="#lsp">Liskov Substitution</a></li>
+                        <li><a href="#isp">Interface Segregation</a></li>
+                        <li><a href="#dip">Dependency Inversion</a></li>
+                    </ol>
+                </li>
+                <li><a href="#conclusion">Resume</a></li>
+            </ol>
+        </div>
     </main>
 
     <footer>
