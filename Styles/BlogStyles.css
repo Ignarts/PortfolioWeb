@@ -187,10 +187,7 @@ body.no-scroll {
     .table-of-contents{
         display: none;
     }
-}
-
-@media (width < 895px) {
-
+    
     .blog-title h1{
         font-size: 1.4rem;
     }
@@ -198,7 +195,9 @@ body.no-scroll {
     .blog-title h3{
         font-size: 1.2rem;
     }
-    
+}
+
+@media (width < 895px) {
     .blog-image{
         min-width: 15rem;
         height: auto;
