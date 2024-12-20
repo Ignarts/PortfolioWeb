@@ -11,3 +11,7 @@
 .bold-title{
     color: #ffa135;
 }
+
+header a{
+    text-decoration: none;
+}
