@@ -22,7 +22,7 @@ async function fetchGitHubData() {
             <img src="../Resources/Home/SVG/github.svg" alt="GitHub Icon" class="repo-icon">
             <div>
                 <h3>${repo.name}</h3>
-                <p>${repo.description || "Without Description"}</p>
+                <p>${repo.description || "Not Description Available"}</p>
             </div>
         </div>
     `).join('');
