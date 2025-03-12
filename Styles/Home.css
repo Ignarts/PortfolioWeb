@@ -86,7 +86,7 @@
 
 /* Info Boxes */
 .info {
-    margin: 1.5rem 0;
+    margin: 2rem 0;
 }
 
 .box{
@@ -176,7 +176,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem; /* Optional: Adjust the gap between the image and text */
+    gap: 0.5rem;
     width: 50%;
     height: 80%;
     border-radius: 1rem;
@@ -206,6 +206,60 @@
     width: 25px;
     height: 25px;
     filter: invert(1);
+}
+
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.profile a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .6rem;
+    gap: 0.5rem;
+    width: 50%;
+    height: 80%;
+    border-radius: 1rem;
+    border-width: 0;
+    background-color: #ffa135;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    color: #171F26;
+    text-decoration: none;
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+.profile a:hover{
+    background-color: #ff8c00;
+}
+
+.repos {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.repo {
+    background-color: #252F3D;
+    padding: 10px;
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    align-items: center;
+}
+
+.repo a {
+    text-decoration: none;
+    color: #ffa135;
+    display: inline-block;
+    margin: 0 auto;
 }
 
 @media (width < 895px) {

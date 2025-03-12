@@ -51,8 +51,7 @@
             </section>
 
             <section class="cv">
-                <a href="../Resources/Home/PDF/IgnacioMelendez_UnityDeveloper_web.pdf" class="cv-button"
-                    target="_blank">
+                <a href="../Resources/Home/PDF/IgnacioMelendez_UnityDeveloper_web.pdf" target="_blank">
                     <img src="../Resources/Home/SVG/cv-icon.svg" alt="cv-icon">
                     Download CV
                 </a>
@@ -119,9 +118,13 @@
                 </div>
             </section>
 
+            <h2>GitHub</h2>
+            <div class="profile" id="profile"></div>
+            <div class="repos" id="repos"></div>
+            
             <h2>Contact</h2>
             <section class="cv">
-                <a href="mailto:ignarts.dev@gmail.com" class="cv-button" target="_blank">Send Mail</a>
+                <a href="mailto:ignarts.dev@gmail.com" target="_blank">Send Mail</a>
             </section>
             <section class="extra-links">
                 <a href="mailto:ignarts.dev@gmail.com" target="_blank"><img src="../Resources/Home/SVG/mail-to.svg"
@@ -131,6 +134,7 @@
                 <a href="https://github.com/Ignarts" target="_blank"><img src="../Resources/Home/SVG/github.svg"
                         alt="GitHub"></a>
             </section>
+
         </section>
 
         <footer>
@@ -148,5 +152,31 @@
 </body>
 
 <script src="../Code/InteractiveElement.js"></script>
+<script>
+    const username = "Ignarts";
+    const profileDiv = document.getElementById("profile");
+    const reposDiv = document.getElementById("repos");
+
+    async function fetchGitHubData() {
+        const profileRes = await fetch(`https://api.github.com/users/${username}`);
+        const profileData = await profileRes.json();
+        
+        profileDiv.innerHTML = `
+            <a href="${profileData.html_url}"target="_blank">GitHub</a>
+        `;
+        
+        const reposRes = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=5`);
+        const reposData = await reposRes.json();
+        
+        reposDiv.innerHTML = reposData.map(repo => `
+            <div class="repo">
+                <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
+                <p>${repo.description || "Sin descripción"}</p>
+            </div>
+        `).join('');
+    }
+
+    fetchGitHubData();
+</script>
 
 </html>
