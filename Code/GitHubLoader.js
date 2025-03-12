@@ -19,8 +19,11 @@ async function fetchGitHubData() {
 
     reposDiv.innerHTML = reposData.map(repo => `
         <div class="repo" data-url="${repo.html_url}">
-            <h3>${repo.name}</h3>
-            <p>${repo.description || "Sin descripción"}</p>
+            <img src="../Resources/Home/SVG/github.svg" alt="GitHub Icon" class="repo-icon">
+            <div>
+                <h3>${repo.name}</h3>
+                <p>${repo.description || "Without Description"}</p>
+            </div>
         </div>
     `).join('');
 
