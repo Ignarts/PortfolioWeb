@@ -245,14 +245,27 @@
 }
 
 .repo {
-    background-color: #252F3D;
-    padding: 10px;
-    margin: 10px auto;
-    width: 80%;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    text-align: center;
+    display: flex;
     align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 1rem auto;
+    background-color: #252F3D;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer; /* Change cursor to pointer */
+    width: 80%;
+    text-align: left; /* Align text to the left */
+}
+
+.repo h3 {
+    font-weight: bold;
+    color: #ffa135;
+}
+
+.repo p {
+    font-size: 0.9rem;
+    color: #CCCCCC;
 }
 
 .repo a {

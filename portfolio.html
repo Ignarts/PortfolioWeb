@@ -152,31 +152,6 @@
 </body>
 
 <script src="../Code/InteractiveElement.js"></script>
-<script>
-    const username = "Ignarts";
-    const profileDiv = document.getElementById("profile");
-    const reposDiv = document.getElementById("repos");
-
-    async function fetchGitHubData() {
-        const profileRes = await fetch(`https://api.github.com/users/${username}`);
-        const profileData = await profileRes.json();
-        
-        profileDiv.innerHTML = `
-            <a href="${profileData.html_url}"target="_blank">GitHub</a>
-        `;
-        
-        const reposRes = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=5`);
-        const reposData = await reposRes.json();
-        
-        reposDiv.innerHTML = reposData.map(repo => `
-            <div class="repo">
-                <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
-                <p>${repo.description || "Sin descripción"}</p>
-            </div>
-        `).join('');
-    }
-
-    fetchGitHubData();
-</script>
+<script src="./Code/GitHubLoader.js"></script>
 
 </html>
