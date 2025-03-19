@@ -1,4 +1,4 @@
-const username = "Ignarts";
+const userName = "Ignarts";
 const profileDiv = document.getElementById("profile");
 const reposDiv = document.getElementById("repos");
 
@@ -7,14 +7,14 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 async function fetchGitHubData() {
-    const profileRes = await fetch(`https://api.github.com/users/${username}`);
+    const profileRes = await fetch(`https://api.github.com/users/${userName}`);
     const profileData = await profileRes.json();
 
     profileDiv.innerHTML = `
         <a href="${profileData.html_url}" target="_blank">GitHub</a>
     `;
 
-    const reposRes = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=5`);
+    const reposRes = await fetch(`https://api.github.com/users/${userName}/repos?sort=updated&per_page=5`);
     const reposData = await reposRes.json();
 
     reposDiv.innerHTML = reposData.map(repo => `
