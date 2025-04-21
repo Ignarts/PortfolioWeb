@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Importancia del Testing en el Desarrollo de Software</title>
+    <link rel="icon" href="../Resources/Home/Images/avatar.jpg">
+    <link rel="stylesheet" href="../../Styles/GeneralSytles.css">
+    <link rel="stylesheet" href="../../Styles/HeaderTitle.css">
+    <link rel="stylesheet" href="../../Styles/BlogStyles.css">
+</head>
+<body>
+    <header>
+        <a href="../portfolio"><h1 class="title"><strong class="bold-title">igna</strong>rts</h1></a>
+    </header>
+
+    <main>
+        <section class="header-Space"></section>
+
+        <section class="blog-article">
+            <section class="blog-title anchor" id="intro">
+                <h1><strong>La Importancia</strong> del Testing<br>en el Desarrollo de Software</h1>
+                <h3>Garantizando la calidad del código en videojuegos y aplicaciones</h3>
+            </section>
+            <section class="blog-tags">
+                <span class="blog-tag">TESTING</span>
+                <span class="blog-tag">UNITY</span>
+                <span class="blog-tag">JAVA</span>
+                <span class="blog-tag">CALIDAD</span>
+            </section>
+
+            <hr>
+
+            <section class="blog-content">
+                <p>El testing es una parte fundamental del desarrollo de software, ya que permite detectar errores, garantizar la calidad del código y mejorar la experiencia del usuario. En este artículo exploraremos la importancia del testing en la programación y cómo aplicarlo en videojuegos desarrollados con Unity en C#, así como en aplicaciones en Java.</p>
+
+                <hr class="left-hr">
+
+                <h3 id="importance" class="anchor">La importancia del testing en el desarrollo de software</h3>
+                <p>El testing no solo ayuda a encontrar errores antes de que el software llegue al usuario final, sino que también facilita el mantenimiento del código y mejora la confiabilidad del producto. Existen diversos tipos de pruebas, como:</p>
+                <ul>
+                    <li><strong>Pruebas unitarias:</strong> Verifican el funcionamiento de componentes individuales.</li>
+                    <li><strong>Pruebas de integración:</strong> Evalúan la interacción entre diferentes módulos.</li>
+                    <li><strong>Pruebas funcionales:</strong> Comprueban que el sistema cumple con los requisitos.</li>
+                    <li><strong>Pruebas de rendimiento:</strong> Analizan la velocidad y estabilidad del software bajo carga.</li>
+                </ul>
+
+                <h3 id="unity-testing" class="anchor">Testing en videojuegos con Unity y C#</h3>
+                <p>En el desarrollo de videojuegos, el testing es crucial para detectar bugs, mejorar la jugabilidad y optimizar el rendimiento. En Unity, se pueden utilizar herramientas como Unity Test Framework, que permite realizar pruebas unitarias y de integración.</p>
+
+                <h4>Ejemplo de prueba unitaria en Unity con C#</h4>
+                <pre>
+<code>
+using NUnit.Framework;
+
+public class MathTests
+{
+    [Test]
+    public void Sum_TwoNumbers_ReturnsCorrectResult()
+    {
+        int result = Sum(2, 3);
+        Assert.AreEqual(5, result);
+    }
+
+    private int Sum(int a, int b)
+    {
+        return a + b;
+    }
+}
+</code>
+                </pre>
+                <p>Este test verifica que la función <code>Sum</code> devuelve el resultado esperado cuando se le pasan dos números.</p>
+
+                <h3 id="java-testing" class="anchor">Testing en aplicaciones Java</h3>
+                <p>En el caso de aplicaciones en Java, una de las herramientas más utilizadas para pruebas unitarias es JUnit. Este framework permite validar el comportamiento de métodos y clases mediante aserciones.</p>
+
+                <h4>Ejemplo de prueba unitaria en Java con JUnit</h4>
+                <pre>
+<code>
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
+
+public class MathTests {
+    @Test
+    public void testSum() {
+        assertEquals(5, sum(2, 3));
+    }
+
+    private int sum(int a, int b) {
+        return a + b;
+    }
+}
+</code>
+                </pre>
+                <p>Este test verifica que el método <code>sum</code> devuelve el resultado correcto cuando se le pasan dos valores.</p>
+
+                <hr class="right-hr">
+
+                <p id="conclusion">El testing es un proceso esencial para garantizar la calidad del software, ya sea en videojuegos con Unity y C# o en aplicaciones Java. Implementar pruebas unitarias y de integración ayuda a mejorar la estabilidad del producto y facilita su mantenimiento a largo plazo. Utilizar frameworks como Unity Test Framework y JUnit permite realizar pruebas de manera eficiente y automatizada, contribuyendo al desarrollo de software robusto y confiable.</p>
+            </section>
+        </section>
+
+        <div class="table-of-contents" class="anchor">
+            <h3><strong>Testing</strong> en el Desarrollo de Software</h3>
+            <ol>
+                <li><a href="#intro" onclick="scrollToSection(event, 'intro')">Introducción</a></li>
+                <li><a href="#importance" onclick="scrollToSection(event, 'importance')">Importancia del Testing</a></li>
+                <li><a href="#unity-testing" onclick="scrollToSection(event, 'unity-testing')">Testing en Unity</a></li>
+                <li><a href="#java-testing" onclick="scrollToSection(event, 'java-testing')">Testing en Java</a></li>
+                <li><a href="#conclusion" onclick="scrollToSection(event, 'conclusion')">Conclusión</a></li>
+            </ol>
+        </div>
+    </main>
+
+    <footer>
+        <p class="footer-text">&copy; 2024 Ignarts. All rights reserved.</p>
+        <p class="footer-text">
+            Created with passion by <strong>Ignacio Meléndez Uriz</strong>,
+            videogame and multiplatform application developer and creativity lover.
+        </p>
+        <p class="footer-text">
+            Do you have an interesting project? Let's talk!
+            <a href="mailto:ignarts.dev@gmail.com" target="_blank">ignarts.dev@gmail.com</a>
+        </p>
+    </footer>
+
+    <div class="overlay"></div>
+
+</body>
+
+<script src="../Code/SmoothScroll.js"></script>
+<script src="../Code/ImageScaler.js"></script>
+</html>

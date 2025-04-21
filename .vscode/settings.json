@@ -1,9 +1,14 @@
 {
     "cSpell.words": [
         "multiplatform",
+        "pseudorandomness",
         "Racerloop",
         "Roguelite",
         "Videogames"
     ],
-    "livePreview.defaultPreviewPath": "/portfolio.html"
+    "livePreview.defaultPreviewPath": "/portfolio.html",
+    "cSpell.ignoreWords": [
+        "FIFA",
+        "PRNGs"
+    ]
 }

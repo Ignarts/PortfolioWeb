@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randomness in Video Games</title>
+    <link rel="icon" href="../Resources/Home/Images/avatar.jpg">
+    <link rel="stylesheet" href="../../Styles/GeneralStyles.css">
+    <link rel="stylesheet" href="../../Styles/HeaderTitle.css">
+    <link rel="stylesheet" href="../../Styles/BlogStyles.css">
+</head>
+
+<body>
+    <header>
+        <a href="../portfolio">
+            <h1 class="title"><strong class="bold-title">igna</strong>rts</h1>
+        </a>
+    </header>
+
+    <main>
+        <section class="header-Space"></section>
+
+        <section class="blog-article">
+            <section class="blog-title anchor" id="intro">
+                <h1><strong>Randomness</strong> in Video Games</h1>
+                <h3>Exploring the role of randomness in video game design</h3>
+            </section>
+            <section class="blog-tags">
+                <span class="blog-tag">PROGRAMMING</span>
+                <span class="blog-tag">VIDEOGAMES</span>
+                <span class="blog-tag">DESIGN</span>
+                <span class="blog-tag">RANDOMNESS</span>
+            </section>
+
+            <hr>
+
+            <img src="../resources/articles/rng-article/Video_game_loot_box_mockup.png" alt="loot-box" class="blog-image">
+
+            <section class="blog-content">
+                <p id="intro">Randomness is a fundamental concept in video games, used to create dynamic and exciting
+                    experiences.
+                    From the generation of dungeons in The Binding of Isaac to the natures of Pokemon, the rewards of
+                    Monster Hunter quests or the player you get on a FIFA "chest", we have a wide range of options
+                    for you to choose from.
+                </p>
+                <p>However, in programming, true randomness doesn't exist, since computers generate pseudorandom
+                    numbers.</p>
+                <p>This article explores how randomness affects the gameplay experience, from critical hits in RPGs to
+                    level
+                    generation and loot systems.</p>
+
+                <hr class="left-hr">
+
+                <h3 id="definition" class="anchor">1. What is Randomness in Programming?</h3>
+                <p>In programming, pseudorandom numbers are generated using algorithms that rely on a
+                    <strong>seed</strong> as a starting point. Although the numbers may appear random to the user, they
+                    are completely deterministic.
+                    This stands in contrast to <em>true randomness</em>, which is theoretical, unpredictable, and cannot
+                    be reproduced within a computational environment.</p>
+
+                <p>In other words, even though we call it "random generation," it's not truly random.
+                    When a computer is asked to generate a random number or sequence, it uses a seed (essentially a
+                    starting value or key) to produce a predictable sequence of numbers.</p>
+
+                <p>If the <strong>same seed</strong> is used again, the algorithm will always produce the <strong>same
+                        sequence</strong> of "random" values. This repeatability is a key characteristic of pseudorandom
+                    number generators (PRNGs), and it's both a limitation and a powerful tool.</p>
+
+                <p>For example:
+                <ul>
+                    <li>If a game uses seed <code>12345</code> to generate a procedurally created level, the layout of
+                        that level will be identical every time the game is run with the same seed.</li>
+                    <li>This makes it easy for developers to reproduce bugs, test features, or share exact scenarios
+                        with players or colleagues.</li>
+                </ul>
+                </p>
+
+                <p>In summary, pseudorandomness behaves like a shuffled deck that always shuffles the same way when you
+                    give it the same instructions—helpful in development, but important to manage carefully if you want
+                    your randomness to <em>feel</em> organic to the player.</p>
+
+
+                <h3 id="controlled-randomness" class="anchor">2. Controlled Randomness in Video Games</h3>
+                <p>In game development, pure randomness is often avoided because it can lead to player frustration or unbalanced experiences.
+                    Instead, developers implement <strong>controlled randomness</strong>, a set of techniques that guide or adjust random outcomes
+                    to align with gameplay design goals.</p>
+                    <p>Some examples of this controlled randomness are:</p>
+                    <ul>
+                        <li><strong>Loot Systems – Diablo, Overwatch:</strong> These games use a "biased randomness" or "loot tables" to ensure
+                            players are rewarded in a fair and predictable way over time. For example, after a certain number of loot boxes, a rare
+                            item is guaranteed.</li>
+                        <li><strong>Critical Hits – XCOM Series:</strong> XCOM uses a system where missed shots increase the hidden probability of future hits.
+                            This system smooths out frustration when a player experiences repeated bad luck.</li>
+                        <li><strong>Card Draw – Hearthstone:</strong> Cards are drawn randomly, but deck construction and mulligan phases provide strategic
+                            control over probabilities.</li>
+                    </ul>
+                    
+                    <p>This approach to randomization has some advantages over true random generation.</p>
+                    <ul>
+                        <li><strong>Improved Player Satisfaction:</strong> Controlled systems reduce the feeling of unfairness. Players feel rewarded for
+                            persistence rather than punished by luck.</li>
+                        <li><strong>Gameplay Balance:</strong> Developers can fine-tune randomness to avoid extreme outcomes that break difficulty curves or
+                            progression.</li>
+                        <li><strong>Replayability with Reliability:</strong> You can offer varied experiences while maintaining structure and fairness.</li>
+                    </ul>
+                    
+                    <p>However, it also has some disadvantages that are evident in:</p>
+                    <ul>
+                        <li><strong>Loss of Surprise:</strong> Over-controlled randomness can feel predictable or manipulated, reducing the thrill of unexpected
+                            outcomes.</li>
+                        <li><strong>Complex Implementation:</strong> Designing systems that feel fair and natural while still using randomness requires extra
+                            effort and testing.</li>
+                        <li><strong>Transparency Issues:</strong> If players notice the system is “rigged,” even in their favor, it can break immersion or
+                            trust.</li>
+                    </ul>
+                    
+                    <p>It also includes several common challenges to be considered when designing and implementing systems using this semi-random generation:</p>
+                    <ul>
+                        <li><strong>Perceived Fairness vs. Actual Fairness:</strong> A mathematically fair system may still feel unfair if players don't understand
+                            the underlying mechanics.</li>
+                        <li><strong>Random Fatigue:</strong> Too many outcomes left to chance can wear down player motivation, especially in competitive settings.</li>
+                        <li><strong>Balancing Consistency with Variety:</strong> Ensuring the game feels different each time, without allowing luck to dominate
+                            skill, is a constant balancing act.</li>
+                    </ul>
+                    
+                    <p>Ultimately, controlled randomness is not about removing randomness, but about shaping it to serve the player's experience. It’s a powerful
+                        design tool when used intentionally and transparently.</p>
+                    
+
+                <h3 id="practical-applications" class="anchor">3. Aplicaciones Prácticas de la Aleatoriedad en
+                    Videojuegos</h3>
+                <ul>
+                    <li><strong>Generación procedimental:</strong> mundos en <strong>Minecraft</strong>, niveles en
+                        Rogue-likes.</li>
+                    <li><strong>Inteligencia artificial:</strong> patrones de ataque con variaciones.</li>
+                    <li><strong>Loot y recompensas:</strong> sistemas que mejoran la retención de jugadores.</li>
+                </ul>
+
+                <h3 id="how-to-apply" class="anchor">4. Cómo Aplicar Correctamente la Aleatoriedad en Desarrollo</h3>
+                <p>Para aplicar correctamente la aleatoriedad, es importante ajustarla según el diseño del juego. Usar
+                    distribuciones de probabilidad, como la distribución de Poisson o normal, puede mejorar la
+                    experiencia del jugador. Además, el testeo y ajuste fino son esenciales para equilibrar el juego.
+                </p>
+
+                <hr class="right-hr">
+
+                <p id="conclusion">En conclusión, entender la aleatoriedad en los videojuegos es clave para diseñar
+                    experiencias memorables. Una aleatoriedad bien aplicada no solo mejora la jugabilidad, sino que
+                    también aumenta la satisfacción del jugador. ¿Cómo has experimentado la aleatoriedad en tus juegos
+                    favoritos? ¡Déjanos tu comentario!</p>
+            </section>
+        </section>
+
+        <div class="table-of-contents" class="anchor">
+            <h3><strong>La Aleatoriedad</strong> en los Videojuegos</h3>
+            <ol>
+                <li><a href="#intro" onclick="scrollToSection(event, 'intro')">Introduction</a></li>
+                <li><a href="#definition" onclick="scrollToSection(event, 'definition')">What is Randomness in
+                        Programming?</a></li>
+                <li><a href="#controlled-randomness"
+                        onclick="scrollToSection(event, 'controlled-randomness')">Controlled Randomness in Video
+                        Games</a></li>
+                <li><a href="#practical-applications"
+                        onclick="scrollToSection(event, 'practical-applications')">Practical Applications of Randomness
+                        in Games</a></li>
+                <li><a href="#how-to-apply" onclick="scrollToSection(event, 'how-to-apply')">How to Properly Apply
+                        Randomness in Development</a></li>
+                <li><a href="#conclusion" onclick="scrollToSection(event, 'conclusion')">Conclusion</a></li>
+            </ol>
+        </div>
+    </main>
+
+    <footer>
+        <p class="footer-text">&copy; 2024 Ignarts. All rights reserved.</p>
+        <p class="footer-text">
+            Created with passion by <strong>Ignacio Meléndez Uriz</strong>,
+            videogame and multiplatform application developer and creativity lover.
+        </p>
+        <p class="footer-text">
+            Do you have an interesting project? Let's talk!
+            <a href="mailto:ignarts.dev@gmail.com" target="_blank">ignarts.dev@gmail.com</a>
+        </p>
+    </footer>
+
+    <div class="overlay"></div>
+
+</body>
+
+<script src="../Code/SmoothScroll.js"></script>
+<script src="../Code/ImageScaler.js"></script>
+
+</html>

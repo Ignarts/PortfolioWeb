@@ -77,12 +77,6 @@
     text-align: center;
 }
 
-.stat-link{
-    text-decoration: none;
-    color: #BDB6AF;
-    font-size: 1.2rem;
-}
-
 /* Info Boxes */
 .info {
     margin: 2rem 0;
