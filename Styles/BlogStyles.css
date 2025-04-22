@@ -178,6 +178,33 @@ body.no-scroll {
     scroll-margin-top: 8rem;
 }
 
+/* Code Styles */
+pre code {
+    display: block;
+    background-color: #1e1e1e;
+    color: #f8f8f2;            
+    padding: 1em;
+    margin: 1.5em 0;
+    border-radius: 8px;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 0.95em;
+    line-height: 1.5;
+    overflow-x: auto;
+    white-space: pre;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+pre code::selection {
+    background: #44475a;
+}
+
+pre {
+    overflow: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+
 /* Media Queries */
 @media (width < 1450px) {
     .blog-tags{
