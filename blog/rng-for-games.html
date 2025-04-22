@@ -35,7 +35,7 @@
 
             <hr>
 
-            <img src="../resources/articles/rng-article/Video_game_loot_box_mockup.png" alt="loot-box"
+            <img src="./Resources/rng/Video_game_loot_box_mockup.png" alt="loot-box"
                 class="blog-image">
 
             <section class="blog-content">
@@ -208,20 +208,8 @@
                     do this is with a “pity counter,” which increases the chance of a critical hit every time one fails.
                     Here’s how that might look in pseudocode:</p>
 
-                <pre><code class="language-pseudo">
-                    // Initialize values
-                    critChance = 0.1        // Base 10% chance
-                    pityIncrease = 0.05     // Each failure adds 5%
-                    currentChance = critChance
-                    
-                    function rollCrit():
-                        if random() < currentChance:
-                            currentChance = critChance   // Reset on success
-                            return true                  // Critical hit!
-                        else:
-                            currentChance += pityIncrease
-                            return false
-                    </code></pre>
+                    <img src="./Resources/rng/rngCode.png" alt="loot-box"
+                    class="blog-image">
 
                 <p>This technique is simple but effective. It prevents long streaks of failure while keeping the
                     excitement of a sudden success. You can tune the base chance and increase factor depending on how
@@ -301,6 +289,5 @@
 </body>
 
 <script src="../Code/SmoothScroll.js"></script>
-<script src="../Code/ImageScaler.js"></script>
 
 </html>
