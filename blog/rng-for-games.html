@@ -35,7 +35,8 @@
 
             <hr>
 
-            <img src="./resources/rng/Video_game_loot_box_mockup.png" alt="loot-box" class="blog-image">
+            <img src="./Resources/rng/Video_game_loot_box_mockup.png" alt="loot-box"
+                class="blog-image">
 
             <section class="blog-content">
                 <p id="intro">Randomness is a fundamental concept in video games, used to create dynamic and exciting
@@ -57,7 +58,8 @@
                     <strong>seed</strong> as a starting point. Although the numbers may appear random to the user, they
                     are completely deterministic.
                     This stands in contrast to <em>true randomness</em>, which is theoretical, unpredictable, and cannot
-                    be reproduced within a computational environment.</p>
+                    be reproduced within a computational environment.
+                </p>
 
                 <p>In other words, even though we call it "random generation," it's not truly random.
                     When a computer is asked to generate a random number or sequence, it uses a seed (essentially a
@@ -82,78 +84,177 @@
 
 
                 <h3 id="controlled-randomness" class="anchor">2. Controlled Randomness in Video Games</h3>
-                <p>In game development, pure randomness is often avoided because it can lead to player frustration or unbalanced experiences.
-                    Instead, developers implement <strong>controlled randomness</strong>, a set of techniques that guide or adjust random outcomes
+                <p>In game development, pure randomness is often avoided because it can lead to player frustration or
+                    unbalanced experiences.
+                    Instead, developers implement <strong>controlled randomness</strong>, a set of techniques that guide
+                    or adjust random outcomes
                     to align with gameplay design goals.</p>
-                    <p>Some examples of this controlled randomness are:</p>
-                    <ul>
-                        <li><strong>Loot Systems – Diablo, Overwatch:</strong> These games use a "biased randomness" or "loot tables" to ensure
-                            players are rewarded in a fair and predictable way over time. For example, after a certain number of loot boxes, a rare
-                            item is guaranteed.</li>
-                        <li><strong>Critical Hits – XCOM Series:</strong> XCOM uses a system where missed shots increase the hidden probability of future hits.
-                            This system smooths out frustration when a player experiences repeated bad luck.</li>
-                        <li><strong>Card Draw – Hearthstone:</strong> Cards are drawn randomly, but deck construction and mulligan phases provide strategic
-                            control over probabilities.</li>
-                    </ul>
-                    
-                    <p>This approach to randomization has some advantages over true random generation.</p>
-                    <ul>
-                        <li><strong>Improved Player Satisfaction:</strong> Controlled systems reduce the feeling of unfairness. Players feel rewarded for
-                            persistence rather than punished by luck.</li>
-                        <li><strong>Gameplay Balance:</strong> Developers can fine-tune randomness to avoid extreme outcomes that break difficulty curves or
-                            progression.</li>
-                        <li><strong>Replayability with Reliability:</strong> You can offer varied experiences while maintaining structure and fairness.</li>
-                    </ul>
-                    
-                    <p>However, it also has some disadvantages that are evident in:</p>
-                    <ul>
-                        <li><strong>Loss of Surprise:</strong> Over-controlled randomness can feel predictable or manipulated, reducing the thrill of unexpected
-                            outcomes.</li>
-                        <li><strong>Complex Implementation:</strong> Designing systems that feel fair and natural while still using randomness requires extra
-                            effort and testing.</li>
-                        <li><strong>Transparency Issues:</strong> If players notice the system is “rigged,” even in their favor, it can break immersion or
-                            trust.</li>
-                    </ul>
-                    
-                    <p>It also includes several common challenges to be considered when designing and implementing systems using this semi-random generation:</p>
-                    <ul>
-                        <li><strong>Perceived Fairness vs. Actual Fairness:</strong> A mathematically fair system may still feel unfair if players don't understand
-                            the underlying mechanics.</li>
-                        <li><strong>Random Fatigue:</strong> Too many outcomes left to chance can wear down player motivation, especially in competitive settings.</li>
-                        <li><strong>Balancing Consistency with Variety:</strong> Ensuring the game feels different each time, without allowing luck to dominate
-                            skill, is a constant balancing act.</li>
-                    </ul>
-                    
-                    <p>Ultimately, controlled randomness is not about removing randomness, but about shaping it to serve the player's experience. It’s a powerful
-                        design tool when used intentionally and transparently.</p>
-                    
-
-                <h3 id="practical-applications" class="anchor">3. Aplicaciones Prácticas de la Aleatoriedad en
-                    Videojuegos</h3>
+                <p>Some examples of this controlled randomness are:</p>
                 <ul>
-                    <li><strong>Generación procedimental:</strong> mundos en <strong>Minecraft</strong>, niveles en
-                        Rogue-likes.</li>
-                    <li><strong>Inteligencia artificial:</strong> patrones de ataque con variaciones.</li>
-                    <li><strong>Loot y recompensas:</strong> sistemas que mejoran la retención de jugadores.</li>
+                    <li><strong>Loot Systems – Diablo, Overwatch:</strong> These games use a "biased randomness" or
+                        "loot tables" to ensure
+                        players are rewarded in a fair and predictable way over time. For example, after a certain
+                        number of loot boxes, a rare
+                        item is guaranteed.</li>
+                    <li><strong>Critical Hits – XCOM Series:</strong> XCOM uses a system where missed shots increase the
+                        hidden probability of future hits.
+                        This system smooths out frustration when a player experiences repeated bad luck.</li>
+                    <li><strong>Card Draw – Hearthstone:</strong> Cards are drawn randomly, but deck construction and
+                        mulligan phases provide strategic
+                        control over probabilities.</li>
                 </ul>
 
-                <h3 id="how-to-apply" class="anchor">4. Cómo Aplicar Correctamente la Aleatoriedad en Desarrollo</h3>
-                <p>Para aplicar correctamente la aleatoriedad, es importante ajustarla según el diseño del juego. Usar
-                    distribuciones de probabilidad, como la distribución de Poisson o normal, puede mejorar la
-                    experiencia del jugador. Además, el testeo y ajuste fino son esenciales para equilibrar el juego.
+                <p>This approach to randomization has some advantages over true random generation.</p>
+                <ul>
+                    <li><strong>Improved Player Satisfaction:</strong> Controlled systems reduce the feeling of
+                        unfairness. Players feel rewarded for
+                        persistence rather than punished by luck.</li>
+                    <li><strong>Gameplay Balance:</strong> Developers can fine-tune randomness to avoid extreme outcomes
+                        that break difficulty curves or
+                        progression.</li>
+                    <li><strong>Replayability with Reliability:</strong> You can offer varied experiences while
+                        maintaining structure and fairness.</li>
+                </ul>
+
+                <p>However, it also has some disadvantages that are evident in:</p>
+                <ul>
+                    <li><strong>Loss of Surprise:</strong> Over-controlled randomness can feel predictable or
+                        manipulated, reducing the thrill of unexpected
+                        outcomes.</li>
+                    <li><strong>Complex Implementation:</strong> Designing systems that feel fair and natural while
+                        still using randomness requires extra
+                        effort and testing.</li>
+                    <li><strong>Transparency Issues:</strong> If players notice the system is “rigged,” even in their
+                        favor, it can break immersion or
+                        trust.</li>
+                </ul>
+
+                <p>It also includes several common challenges to be considered when designing and implementing systems
+                    using this semi-random generation:</p>
+                <ul>
+                    <li><strong>Perceived Fairness vs. Actual Fairness:</strong> A mathematically fair system may still
+                        feel unfair if players don't understand
+                        the underlying mechanics.</li>
+                    <li><strong>Random Fatigue:</strong> Too many outcomes left to chance can wear down player
+                        motivation, especially in competitive settings.</li>
+                    <li><strong>Balancing Consistency with Variety:</strong> Ensuring the game feels different each
+                        time, without allowing luck to dominate
+                        skill, is a constant balancing act.</li>
+                </ul>
+
+                <p>Ultimately, controlled randomness is not about removing randomness, but about shaping it to serve the
+                    player's experience. It’s a powerful
+                    design tool when used intentionally and transparently.</p>
+
+
+                <h3 id="practical-applications" class="anchor">3. Practical Applications of Randomness in Video Games
+                </h3>
+                <p>Randomness plays a crucial role in shaping gameplay across a wide variety of genres. Its applications
+                    go far beyond just “rolling a dice”; it drives world generation, AI behavior, reward systems, and
+                    even narrative outcomes—each with unique goals and challenges.</p>
+
+                <p>One of the most recognizable uses is in <strong>Procedural Generation</strong>. Games like
+                    <em>Minecraft</em> or <em>Spelunky</em> generate their environments algorithmically, resulting in
+                    unique worlds or levels for each playthrough. This randomness boosts replayability and gives players
+                    a sense of discovery. However, ensuring these randomly generated spaces are still fun, balanced, and
+                    navigable is a constant design challenge.
                 </p>
 
-                <hr class="right-hr">
+                <p>Another important area is <strong>Enemy AI Behavior</strong>. Randomized elements—such as patrol
+                    patterns or combat tactics—can make enemies feel less robotic and more realistic. In stealth games,
+                    for
+                    example, slightly unpredictable movement can increase tension. However, randomness in AI must be
+                    handled carefully to avoid frustrating players with seemingly irrational or unfair decisions,
+                    especially in strategic or competitive settings.</p>
 
-                <p id="conclusion">En conclusión, entender la aleatoriedad en los videojuegos es clave para diseñar
-                    experiencias memorables. Una aleatoriedad bien aplicada no solo mejora la jugabilidad, sino que
-                    también aumenta la satisfacción del jugador. ¿Cómo has experimentado la aleatoriedad en tus juegos
-                    favoritos? ¡Déjanos tu comentario!</p>
+                <p><strong>Loot and Reward Systems</strong> are perhaps the most commercially exploited form of
+                    randomness. In games like <em>Borderlands</em> or <em>Destiny</em>, weapons and gear are generated
+                    with randomized stats, encouraging players to keep searching for the “perfect drop.” While this
+                    creates excitement and long-term engagement, it can also backfire if the odds feel unfair, or if
+                    progression becomes overly reliant on chance. Gacha systems in mobile games are a notable
+                    example: players are drawn in by the promise of rare characters or items, but the opacity of odds
+                    often leads to controversy, especially when monetization is involved.</p>
+
+                <p>Randomness is also used in more subtle ways, such as <strong>Puzzle and Event Variation</strong>.
+                    Games like <em>Into the Breach</em> or <em>Darkest Dungeon</em> randomize enemy placements, events,
+                    or character traits, ensuring that no two playthroughs feel exactly the same. This unpredictability
+                    keeps gameplay fresh, but requires a safety net in design to avoid unsolvable scenarios or extreme
+                    difficulty spikes.</p>
+
+                <p>Even in narrative games, randomness finds its place. Titles like <em>Disco Elysium</em> use
+                    randomized dice rolls for dialogue choices or skill checks, allowing story paths to branch in
+                    unexpected and memorable ways. This adds a layer of spontaneity to storytelling, though it can be
+                    tricky to ensure that each possible outcome still feels coherent and rewarding.</p>
+
+                <p>In short, randomness in video games is a tool for generating variety, surprise, and player-driven
+                    storytelling. When used thoughtfully, it transforms static systems into living worlds. But if left
+                    unchecked or poorly implemented, it can just as easily undermine the player's sense of control and
+                    satisfaction.</p>
+
+
+                <h3 id="how-to-apply" class="anchor">4. How to Properly Apply Randomness in Development</h3>
+                <p>Applying randomness in game development isn't just about calling a random function and hoping for the
+                    best. It's about aligning random systems with your design goals—whether that’s creating suspense,
+                    balancing difficulty, or increasing replay value. Properly implemented randomness enhances player
+                    engagement without making them feel like they’re at the mercy of pure chance.</p>
+
+                <p>One key concept is the use of <strong>probability distributions</strong>. While uniform randomness
+                    (where every outcome has equal probability) is easy to implement, it’s rarely the best choice for
+                    game feel. Instead, developers often use distributions like the <em>normal (bell curve)</em> to
+                    generate more predictable but still variable outcomes, or <em>Poisson distributions</em> to model
+                    rare events like critical hits or loot drops.</p>
+
+                <p>Let’s say you want to design a random critical hit system that feels fair over time. A simple way to
+                    do this is with a “pity counter,” which increases the chance of a critical hit every time one fails.
+                    Here’s how that might look in pseudocode:</p>
+
+                    <img src="./Resources/rng/rngCode.png" alt="loot-box"
+                    class="blog-image">
+
+                <p>This technique is simple but effective. It prevents long streaks of failure while keeping the
+                    excitement of a sudden success. You can tune the base chance and increase factor depending on how
+                    generous or punishing you want the system to be.</p>
+
+                <p>It’s also important to <strong>test and iterate</strong>. Randomness needs balance: too much can feel
+                    chaotic, too little can feel repetitive. Tools like heatmaps, player telemetry, or simple logging
+                    can help you visualize how your random systems behave over many runs or sessions.</p>
+
+                <p>Lastly, always consider <strong>player perception</strong>. Even mathematically sound randomness can
+                    feel unfair if players don’t understand what’s happening behind the scenes. Sometimes it’s worth
+                    making odds slightly more forgiving than they seem—or communicating mechanics more transparently—to
+                    keep players satisfied.</p>
+
+                <p>In the end, randomness should feel like magic, not math. The goal is to surprise players, not confuse
+                    or punish them.</p>
+
+
+                <hr class="right-hr">
+                <p id="conclusion">
+                    In conclusion, randomness is far more than a background mechanic; it's a fundamental part of how
+                    games create emotion, tension, and variety. From procedural generation to AI unpredictability and reward systems,
+                    its influence is everywhere. But effective randomness doesn't come from chaos; it comes from design.
+                </p>
+                <p>
+                    When randomness is implemented with intention and balance, it enhances gameplay and keeps players
+                    engaged. But when it's left unchecked or poorly communicated, it can feel unfair, frustrating, or even manipulative.
+                    The difference lies in control, context, and player perception.
+                </p>
+                <p>
+                    As a developer, understanding randomness is not just about generating numbers, it's about shaping
+                    experiences. Whether you're designing a loot system, a level generator, or an encounter mechanic, your job is to
+                    ensure that what feels random is, in fact, thoughtfully crafted.
+                </p>
+                <p>
+                    So next time a player gets that perfect critical hit, uncovers a hidden cave, or opens a rare item
+                    drop, just remember: behind that moment of surprise, there’s a whole system working silently to make it feel
+                    just right.
+                </p>
+
             </section>
         </section>
 
         <div class="table-of-contents" class="anchor">
-            <h3><strong>La Aleatoriedad</strong> en los Videojuegos</h3>
+            <h3><strong>Randomness</strong> in VideoGames</h3>
             <ol>
                 <li><a href="#intro" onclick="scrollToSection(event, 'intro')">Introduction</a></li>
                 <li><a href="#definition" onclick="scrollToSection(event, 'definition')">What is Randomness in
@@ -175,7 +276,7 @@
         <p class="footer-text">&copy; 2024 Ignarts. All rights reserved.</p>
         <p class="footer-text">
             Created with passion by <strong>Ignacio Meléndez Uriz</strong>,
-            videogame and multiplatform application developer and creativity lover.
+            videogames and multiplatform application developer and creativity lover.
         </p>
         <p class="footer-text">
             Do you have an interesting project? Let's talk!
@@ -188,6 +289,5 @@
 </body>
 
 <script src="../Code/SmoothScroll.js"></script>
-<script src="../Code/ImageScaler.js"></script>
 
 </html>
