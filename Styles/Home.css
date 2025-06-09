@@ -276,6 +276,68 @@
     margin: 0 auto;
 }
 
+.floating-worktime {
+    position: fixed;
+    right: 20px;
+    bottom: 32px;
+    z-index: 1000;
+    background: linear-gradient(90deg, #171F26 60%, #252F3D 100%);
+    border-radius: 1.5em;
+    box-shadow: 0 4px 24px #000a;
+    border: 2px solid #ffa13588;
+    padding: 18px 32px 14px 32px;
+    min-width: 260px;
+    max-width: 90vw;
+    text-align: center;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.floating-worktime:hover {
+    box-shadow: 0 8px 32px #ffa13555;
+    transform: translateY(-4px) scale(1.03);
+}
+
+.floating-label {
+    font-size: 1em;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    color: #fff;
+    margin-bottom: 0.5em;
+    letter-spacing: 0.03em;
+    font-weight: 500;
+}
+
+.floating-label .highlight {
+    color: #ffa135;
+    font-weight: bold;
+}
+
+.floating-clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#experience-counter {
+    font-size: 1.5em;
+    font-family: 'Fira Mono', 'Consolas', 'Roboto Mono', monospace;
+    color: #ffa135;
+    letter-spacing: 0.18em;
+    text-shadow: 0 0 16px #ffa13555, 0 0 2px #fff2;
+    font-variant-numeric: tabular-nums;
+    user-select: none;
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    transition: color 0.2s;
+}
+
+#experience-counter:hover {
+    color: #fff;
+    text-shadow: 0 0 20px #ffa13599;
+}
+
 @media (width < 895px) {
     .profile-pic {
         width: 80px;
@@ -344,6 +406,10 @@
 
     .repo p {
         font-size: 0.9rem;
+    }
+    
+    .floating-worktime {
+        display: none;
     }
 }
 
