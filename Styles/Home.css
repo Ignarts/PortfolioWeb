@@ -328,11 +328,6 @@
     transition: color 0.2s;
 }
 
-#experience-counter:hover {
-    color: #fff;
-    text-shadow: 0 0 20px #ffa13599;
-}
-
 @media (width < 895px) {
     .profile-pic {
         width: 80px;
