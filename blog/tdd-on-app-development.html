@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Importancia del Testing en el Desarrollo de Software</title>
+    <title>The Power of TDD in Application Development</title>
     <link rel="icon" href="../Resources/Home/Images/avatar.jpg">
     <link rel="stylesheet" href="../Styles/GeneralStyles.css">
     <link rel="stylesheet" href="../Styles/HeaderTitle.css">
@@ -34,85 +34,113 @@
             <hr>
 
             <section class="blog-content">
-                <p>Testing is a fundamental part of software development. It helps identify bugs early, ensures the stability of your codebase, and improves the user experience.
-                    In this article, we’ll explore why testing is crucial and how to apply it effectively in Unity-based games written in C#, as well as Java applications.</p>
+        <p>Test-Driven Development (TDD) is a disciplined software development process where you write tests before writing the code they test. This mindset shift encourages clarity, design simplicity, and confidence. By iterating through a tight loop of failing tests, minimum code, and refactoring, developers produce robust, well-structured applications with fewer bugs and faster delivery times.</p>
 
-                <hr class="left-hr">
+        <p>TDD works seamlessly in agile workflows and is particularly valuable in continuous integration and continuous deployment (CI/CD) pipelines. It transforms the act of coding into a validation-driven experience, turning each new feature into a clear, testable contract.</p>
 
-                <h3 id="importance" class="anchor">What is TDD?</h3>
-                <p>TDD follows a simple, repeatable cycle:</p>
-                <ul>
-                    <li><strong>Red:</strong> Write a failing test that describes a desired behavior.</li>
-                    <li><strong>Green:</strong> Write the minimum code necessary to pass the test.</li>
-                    <li><strong>Refactor:</strong> Improve the implementation without changing its behavior.</li>
-                </ul>
-                <p>This cycle helps developers clarify requirements, reduce bugs, and keep their code modular and testable.</p>
+        <hr class="left-hr">
 
-                <h3 id="example-js" class="anchor">TDD Example: Building a Calculator (JavaScript)</h3>
-                <p>Let’s build a simple calculator with TDD in JavaScript. We'll use Jest for testing.</p>
+        <h3 id="what-is-tdd" class="anchor">What is TDD?</h3>
+        <p>TDD follows a structured cycle often summarized as Red-Green-Refactor:</p>
+        <ul>
+          <li><strong>Red:</strong> Write a test that fails because the feature isn’t implemented yet.</li>
+          <li><strong>Green:</strong> Write the simplest possible code to make the test pass.</li>
+          <li><strong>Refactor:</strong> Clean up the code while keeping the tests green.</li>
+        </ul>
+        <p>This methodology encourages small, incremental changes and ensures every line of production code is justified by a corresponding test.</p>
 
-                <h4>Step 1: Write the first failing test</h4>
-                <pre><code>// calculator.test.js
-import { Calculator } from './calculator';
+        <h3 id="example-js" class="anchor">Real-World TDD: Currency Converter (TypeScript)</h3>
+        <p>Instead of a toy calculator, let’s implement a simple but realistic currency converter. We'll use TDD and TypeScript with Jest.</p>
 
-test('adds two numbers', () => {
-    const calc = new Calculator();
-    expect(calc.add(2, 3)).toBe(5);
+        <h4>Step 1: Write a failing test</h4>
+        <pre><code>// converter.test.ts
+import { CurrencyConverter } from './converter';
+
+test('converts EUR to USD', () => {
+  const converter = new CurrencyConverter({ EUR: 1.1 });
+  expect(converter.convert(10, 'EUR')).toBe(11);
 });
-                </code></pre>
+        </code></pre>
 
-                <h4>Step 2: Write minimal implementation</h4>
-                <pre><code>// calculator.js
-export class Calculator {
-    add(a, b) {
-        return a + b;
-    }
+        <h4>Step 2: Make it pass</h4>
+        <pre><code>// converter.ts
+export class CurrencyConverter {
+  constructor(private rates: Record<string, number>) {}
+
+  convert(amount: number, currency: string): number {
+    return amount * this.rates[currency];
+  }
 }
-                </code></pre>
+        </code></pre>
 
-                <p>We follow this pattern to incrementally build other operations like subtraction, multiplication, and division.</p>
+        <h4>Step 3: Add validation</h4>
+        <pre><code>// converter.test.ts
+ test('throws if currency is unknown', () => {
+   const converter = new CurrencyConverter({ EUR: 1.1 });
+   expect(() => converter.convert(5, 'JPY')).toThrow('Unsupported currency');
+ });
+        </code></pre>
 
-                <h3 id="refactor-benefits" class="anchor">Benefits of TDD</h3>
-                <ul>
-                    <li><strong>Design clarity:</strong> Writing tests first forces you to think about the interface.</li>
-                    <li><strong>Reduced bugs:</strong> Catch errors early, long before production.</li>
-                    <li><strong>Refactoring safety:</strong> Tests provide a safety net to improve design without fear.</li>
-                    <li><strong>Confidence to ship:</strong> You know your code works because it’s been validated from the start.</li>
-                </ul>
-
-                <h3 id="multi-language" class="anchor">TDD in Other Languages: Java & C#</h3>
-                <p>The same approach applies in statically typed languages like Java and C#. In Java, frameworks like JUnit and AssertJ make TDD expressive and easy to integrate. In C#, NUnit or xUnit provide similar functionality with deep integration into IDEs like Visual Studio.</p>
-
-                <h4>Example in Java</h4>
-                <pre><code>import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
-
-class CalculatorTest {
-    @Test
-    void addsTwoNumbers() {
-        Calculator calc = new Calculator();
-        assertEquals(5, calc.add(2, 3));
-    }
+        <h4>Step 4: Make it pass with error handling</h4>
+        <pre><code>// converter.ts
+convert(amount: number, currency: string): number {
+  if (!this.rates[currency]) {
+    throw new Error('Unsupported currency');
+  }
+  return amount * this.rates[currency];
 }
-                </code></pre>
+        </code></pre>
 
-                <h4>Example in C#</h4>
-                <pre><code>using NUnit.Framework;
+        <p>We now have a modular, testable service built iteratively through TDD. Each requirement is backed by a test, making changes safer and intent clearer.</p>
 
-public class CalculatorTests {
-    [Test]
-    public void AddsTwoNumbers() {
-        var calc = new Calculator();
-        Assert.AreEqual(5, calc.Add(2, 3));
-    }
+        <h3 id="refactor-benefits" class="anchor">Why Developers Embrace TDD</h3>
+        <ul>
+          <li><strong>Better design:</strong> Writing tests first forces you to define contracts and interfaces clearly.</li>
+          <li><strong>Fewer bugs:</strong> Edge cases and invalid inputs are captured early in the process.</li>
+          <li><strong>Smoother refactoring:</strong> With a robust test suite, you can safely change code without fear of breaking features.</li>
+          <li><strong>Faster debugging:</strong> When something breaks, a failing test tells you exactly where and why.</li>
+          <li><strong>Confidence:</strong> Developers (and stakeholders) can deploy with peace of mind.</li>
+        </ul>
+
+        <h3 id="multi-language" class="anchor">TDD Across Languages: Java & C#</h3>
+        <p>TDD is equally effective in statically typed languages like Java and C#. In Java, developers often use JUnit, Mockito, and AssertJ to create expressive, isolated tests. In C#, tools like NUnit, xUnit, and Moq play similar roles, tightly integrated into IDEs like Visual Studio.</p>
+
+        <h4>Example in Java</h4>
+        <pre><code>import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+class CurrencyConverterTest {
+  @Test
+  void convertsEURtoUSD() {
+    var rates = Map.of("EUR", 1.1);
+    var converter = new CurrencyConverter(rates);
+    assertEquals(11.0, converter.convert(10, "EUR"));
+  }
 }
-                </code></pre>
+        </code></pre>
 
-                <hr class="right-hr">
+        <h4>Example in C#</h4>
+        <pre><code>using NUnit.Framework;
 
-                <p id="conclusion">TDD changes the way you think about code. By writing tests first, you naturally write smaller, decoupled components that are easier to test, maintain, and scale. Whether you're using JavaScript, Java, C#, or any other language, adopting TDD leads to cleaner, more robust applications—and greater developer confidence.</p>
-            </section>
-        </section>
+public class CurrencyConverterTests {
+  [Test]
+  public void ConvertsEURtoUSD() {
+    var rates = new Dictionary<string, double> { {"EUR", 1.1} };
+    var converter = new CurrencyConverter(rates);
+    Assert.AreEqual(11.0, converter.Convert(10, "EUR"));
+  }
+}
+        </code></pre>
+
+        <p>Regardless of language, the TDD pattern remains the same: start with behavior, prove it with a test, and implement only what’s needed.</p>
+
+        <hr class="right-hr">
+
+        <p id="conclusion">
+          TDD isn't just about writing tests—it's about changing how we approach problems. It helps us write software that's easier to maintain, easier to extend, and easier to trust. When paired with version control, CI pipelines, and peer code review, TDD becomes a cornerstone of modern professional software development. It turns doubt into confidence and complexity into clarity.
+        </p>
+      </section>
+    </section>
 
         <div class="table-of-contents anchor">
             <h3><strong>Test-Driven Development</strong> in Applications</h3>
