@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Importancia del Testing en el Desarrollo de Software</title>
+    <link rel="icon" href="../Resources/Home/Images/avatar.jpg">
+    <link rel="stylesheet" href="../Styles/GeneralStyles.css">
+    <link rel="stylesheet" href="../Styles/HeaderTitle.css">
+    <link rel="stylesheet" href="../Styles/BlogStyles.css">
+</head>
+<body>
+    <header>
+        <a href="../portfolio"><h1 class="title"><strong class="bold-title">igna</strong>rts</h1></a>
+    </header>
+
+    <main>
+        <section class="header-Space"></section>
+
+        <section class="blog-article">
+            <section class="blog-title anchor" id="intro">
+                <h1><strong>The Power of TDD</strong> in Application Development</h1>
+                <h3>How Test-Driven Development improves quality, design, and confidence</h3>
+            </section>
+            <section class="blog-tags">
+                <span class="blog-tag">TDD</span>
+                <span class="blog-tag">TESTING</span>
+                <span class="blog-tag">JAVASCRIPT</span>
+                <span class="blog-tag">TYPESCRIPT</span>
+                <span class="blog-tag">JAVA</span>
+                <span class="blog-tag">C#</span>
+            </section>
+
+            <hr>
+
+            <section class="blog-content">
+                <p>Testing is a fundamental part of software development. It helps identify bugs early, ensures the stability of your codebase, and improves the user experience.
+                    In this article, we’ll explore why testing is crucial and how to apply it effectively in Unity-based games written in C#, as well as Java applications.</p>
+
+                <hr class="left-hr">
+
+                <h3 id="importance" class="anchor">What is TDD?</h3>
+                <p>TDD follows a simple, repeatable cycle:</p>
+                <ul>
+                    <li><strong>Red:</strong> Write a failing test that describes a desired behavior.</li>
+                    <li><strong>Green:</strong> Write the minimum code necessary to pass the test.</li>
+                    <li><strong>Refactor:</strong> Improve the implementation without changing its behavior.</li>
+                </ul>
+                <p>This cycle helps developers clarify requirements, reduce bugs, and keep their code modular and testable.</p>
+
+                <h3 id="example-js" class="anchor">TDD Example: Building a Calculator (JavaScript)</h3>
+                <p>Let’s build a simple calculator with TDD in JavaScript. We'll use Jest for testing.</p>
+
+                <h4>Step 1: Write the first failing test</h4>
+                <pre><code>// calculator.test.js
+import { Calculator } from './calculator';
+
+test('adds two numbers', () => {
+    const calc = new Calculator();
+    expect(calc.add(2, 3)).toBe(5);
+});
+                </code></pre>
+
+                <h4>Step 2: Write minimal implementation</h4>
+                <pre><code>// calculator.js
+export class Calculator {
+    add(a, b) {
+        return a + b;
+    }
+}
+                </code></pre>
+
+                <p>We follow this pattern to incrementally build other operations like subtraction, multiplication, and division.</p>
+
+                <h3 id="refactor-benefits" class="anchor">Benefits of TDD</h3>
+                <ul>
+                    <li><strong>Design clarity:</strong> Writing tests first forces you to think about the interface.</li>
+                    <li><strong>Reduced bugs:</strong> Catch errors early, long before production.</li>
+                    <li><strong>Refactoring safety:</strong> Tests provide a safety net to improve design without fear.</li>
+                    <li><strong>Confidence to ship:</strong> You know your code works because it’s been validated from the start.</li>
+                </ul>
+
+                <h3 id="multi-language" class="anchor">TDD in Other Languages: Java & C#</h3>
+                <p>The same approach applies in statically typed languages like Java and C#. In Java, frameworks like JUnit and AssertJ make TDD expressive and easy to integrate. In C#, NUnit or xUnit provide similar functionality with deep integration into IDEs like Visual Studio.</p>
+
+                <h4>Example in Java</h4>
+                <pre><code>import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+class CalculatorTest {
+    @Test
+    void addsTwoNumbers() {
+        Calculator calc = new Calculator();
+        assertEquals(5, calc.add(2, 3));
+    }
+}
+                </code></pre>
+
+                <h4>Example in C#</h4>
+                <pre><code>using NUnit.Framework;
+
+public class CalculatorTests {
+    [Test]
+    public void AddsTwoNumbers() {
+        var calc = new Calculator();
+        Assert.AreEqual(5, calc.Add(2, 3));
+    }
+}
+                </code></pre>
+
+                <hr class="right-hr">
+
+                <p id="conclusion">TDD changes the way you think about code. By writing tests first, you naturally write smaller, decoupled components that are easier to test, maintain, and scale. Whether you're using JavaScript, Java, C#, or any other language, adopting TDD leads to cleaner, more robust applications—and greater developer confidence.</p>
+            </section>
+        </section>
+
+        <div class="table-of-contents anchor">
+            <h3><strong>Test-Driven Development</strong> in Applications</h3>
+            <ol>
+                <li><a href="#intro" onclick="scrollToSection(event, 'intro')">Introduction</a></li>
+                <li><a href="#what-is-tdd" onclick="scrollToSection(event, 'what-is-tdd')">What is TDD?</a></li>
+                <li><a href="#example-js" onclick="scrollToSection(event, 'example-js')">TDD Example (JavaScript)</a></li>
+                <li><a href="#refactor-benefits" onclick="scrollToSection(event, 'refactor-benefits')">Benefits of TDD</a></li>
+                <li><a href="#multi-language" onclick="scrollToSection(event, 'multi-language')">TDD in Java and C#</a></li>
+                <li><a href="#conclusion" onclick="scrollToSection(event, 'conclusion')">Conclusion</a></li>
+            </ol>
+        </div>
+    </main>
+
+    <footer>
+        <p class="footer-text">&copy; 2024 Ignarts. All rights reserved.</p>
+        <p class="footer-text">
+            Created with passion by <strong>Ignacio Meléndez Uriz</strong>,
+            videogame and multiplatform application developer and creativity lover.
+        </p>
+        <p class="footer-text">
+            Do you have an interesting project? Let's talk!
+            <a href="mailto:ignarts.dev@gmail.com" target="_blank">ignarts.dev@gmail.com</a>
+        </p>
+    </footer>
+
+    <div class="overlay"></div>
+
+</body>
+
+<script src="../Code/SmoothScroll.js"></script>
+<script src="../Code/ImageScaler.js"></script>
+</html>

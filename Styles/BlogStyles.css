@@ -1,5 +1,5 @@
 .blog-article {
-    width: 40%;
+    width: 50%;
     height: auto;
     margin: 2rem auto;
     padding: 2rem;
@@ -135,7 +135,7 @@ body.no-scroll {
 
 .table-of-contents {
     position: fixed;
-    top: 6rem;
+    top: 7rem;
     right: 2%;
     background-color: #171F26;
     border: 1px solid #FFA500;
