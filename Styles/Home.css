@@ -292,11 +292,6 @@
     transition: box-shadow 0.2s, transform 0.2s;
 }
 
-.floating-worktime:hover {
-    box-shadow: 0 8px 32px #ffa13555;
-    transform: translateY(-4px) scale(1.03);
-}
-
 .floating-label {
     font-size: 1em;
     font-family: 'Roboto', 'Arial', sans-serif;
