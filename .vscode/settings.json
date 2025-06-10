@@ -1,19 +1,18 @@
 {
-    "cSpell.words": [
-        "Ignarts",
-        "Meléndez",
-        "multiplatform",
-        "playthrough",
-        "pseudorandomness",
-        "Racerloop",
-        "replayability",
-        "Roguelite",
-        "Uriz",
-        "Videogames"
-    ],
-    "livePreview.defaultPreviewPath": "/portfolio.html",
-    "cSpell.ignoreWords": [
-        "FIFA",
-        "PRNGs"
-    ]
+  "cSpell.words": [
+    "Ignarts",
+    "Meléndez",
+    "multiplatform",
+    "playthrough",
+    "pseudorandomness",
+    "Racerloop",
+    "replayability",
+    "Roguelite",
+    "Uriz",
+    "Videogames"
+  ],
+  "livePreview.defaultPreviewPath": "/portfolio.html",
+  "cSpell.ignoreWords": ["FIFA", "PRNGs"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true
 }
