@@ -112,6 +112,89 @@ hr {
     position: relative;
 }
 
+.blog-example-image {
+    width: 60%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+    transition: transform 0.25s ease;
+}
+
+.code-window {
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: 'Fira Code', monospace;
+  margin: 2em 0;
+}
+
+.code-header {
+  background: #2d2d2d;
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.code-filename {
+  color: #BDB6AF;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.95em;
+  letter-spacing: 0.5px;
+  margin-left: 1rem;
+}
+
+.code-header .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.code-header .red {
+  background-color: #ff5f56;
+}
+
+.code-header .yellow {
+  background-color: #ffbd2e;
+}
+
+.code-header .green {
+  background-color: #27c93f;
+}
+
+pre {
+  margin: 0;
+  padding: 1em;
+  overflow-x: auto;
+  color: #f8f8f2;
+  background-color: transparent;
+}
+
+pre.line-numbers {
+  white-space: pre !important;
+  overflow-x: auto !important;
+  font-size: .8rem !important;
+  line-height: 1.6 !important;
+  color: #f8f8f2;
+  background-color: transparent;
+}
+
+code[class*="language-"] {
+  font-size: .8rem !important;
+  line-height: 1.6 !important;
+  color: #f8f8f2;
+  background-color: transparent;
+}
+
+pre.line-numbers > code {
+  display: block;
+  padding-left: 2em !important;
+}
+
 .overlay {
     position: fixed;
     top: 0;

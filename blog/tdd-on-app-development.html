@@ -1,42 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Power of TDD in Application Development</title>
-    <link rel="icon" href="../Resources/Home/Images/avatar.jpg">
-    <link rel="stylesheet" href="../Styles/GeneralStyles.css">
-    <link rel="stylesheet" href="../Styles/HeaderTitle.css">
-    <link rel="stylesheet" href="../Styles/BlogStyles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Power of TDD in Application Development</title>
+  <link rel="icon" href="../Resources/Home/Images/avatar.jpg">
+  <link rel="stylesheet" href="../Styles/GeneralStyles.css">
+  <link rel="stylesheet" href="../Styles/HeaderTitle.css">
+  <link rel="stylesheet" href="../Styles/BlogStyles.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-typescript.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-java.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-csharp.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.css"
+    rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
 </head>
+
 <body>
-    <header>
-        <a href="../portfolio"><h1 class="title"><strong class="bold-title">igna</strong>rts</h1></a>
-    </header>
+  <header>
+    <a href="../portfolio">
+      <h1 class="title"><strong class="bold-title">igna</strong>rts</h1>
+    </a>
+  </header>
 
-    <main>
-        <section class="header-Space"></section>
+  <main>
+    <section class="header-Space"></section>
 
-        <section class="blog-article">
-            <section class="blog-title anchor" id="intro">
-                <h1><strong>The Power of TDD</strong> in Application Development</h1>
-                <h3>How Test-Driven Development improves quality, design, and confidence</h3>
-            </section>
-            <section class="blog-tags">
-                <span class="blog-tag">TDD</span>
-                <span class="blog-tag">TESTING</span>
-                <span class="blog-tag">JAVASCRIPT</span>
-                <span class="blog-tag">TYPESCRIPT</span>
-                <span class="blog-tag">JAVA</span>
-                <span class="blog-tag">C#</span>
-            </section>
+    <section class="blog-article">
+      <section class="blog-title anchor" id="intro">
+        <h1><strong>The Power of TDD</strong> in Application Development</h1>
+        <h3>How Test-Driven Development improves quality, design, and confidence</h3>
+      </section>
+      <section class="blog-tags">
+        <span class="blog-tag">TDD</span>
+        <span class="blog-tag">TESTING</span>
+        <span class="blog-tag">JAVASCRIPT</span>
+        <span class="blog-tag">TYPESCRIPT</span>
+        <span class="blog-tag">JAVA</span>
+        <span class="blog-tag">C#</span>
+      </section>
 
-            <hr>
+      <hr>
 
-            <section class="blog-content">
-        <p>Test-Driven Development (TDD) is a disciplined software development process where you write tests before writing the code they test. This mindset shift encourages clarity, design simplicity, and confidence. By iterating through a tight loop of failing tests, minimum code, and refactoring, developers produce robust, well-structured applications with fewer bugs and faster delivery times.</p>
+      <img src="./Resources/tdd-article/tdd_reference_image.png" alt="tdd_logo" class="blog-image"
+        style="width: 40%; height: auto;">
 
-        <p>TDD works seamlessly in agile workflows and is particularly valuable in continuous integration and continuous deployment (CI/CD) pipelines. It transforms the act of coding into a validation-driven experience, turning each new feature into a clear, testable contract.</p>
+      <section class="blog-content">
+        <p>Test-Driven Development (TDD) is a disciplined software development process where you write tests before
+          writing the code they test. This mindset shift encourages clarity, design simplicity, and confidence. By
+          iterating through a tight loop of failing tests, minimum code, and refactoring, developers produce robust,
+          well-structured applications with fewer bugs and faster delivery times.</p>
+
+        <p>TDD works seamlessly in agile workflows and is particularly valuable in continuous integration and continuous
+          deployment (CI/CD) pipelines. It transforms the act of coding into a validation-driven experience, turning
+          each new feature into a clear, testable contract. Moreover, it improves onboarding for new developers, since
+          tests double as living documentation.</p>
 
         <hr class="left-hr">
 
@@ -47,130 +72,280 @@
           <li><strong>Green:</strong> Write the simplest possible code to make the test pass.</li>
           <li><strong>Refactor:</strong> Clean up the code while keeping the tests green.</li>
         </ul>
-        <p>This methodology encourages small, incremental changes and ensures every line of production code is justified by a corresponding test.</p>
+        <p>This methodology encourages small, incremental changes and ensures every line of production code is justified
+          by a corresponding test. Over time, this leads to better design decisions, fewer regressions, and improved
+          developer confidence.</p>
+
+        <p>TDD also enables the principle of YAGNI (You Ain't Gonna Need It), since only features with clear,
+          test-backed requirements get implemented.</p>
 
         <h3 id="example-js" class="anchor">Real-World TDD: Currency Converter (TypeScript)</h3>
-        <p>Instead of a toy calculator, let’s implement a simple but realistic currency converter. We'll use TDD and TypeScript with Jest.</p>
+        <p>Let’s implement a realistic example: a currency converter service. This reflects a real-world use case in
+          apps that fetch exchange rates from APIs. We'll use TDD and TypeScript with Jest.</p>
 
         <h4>Step 1: Write a failing test</h4>
-        <pre><code>// converter.test.ts
-import { CurrencyConverter } from './converter';
+        <div class="code-window">
+          <div class="code-header">
+            <span class="code-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </span>
+            <span class="code-filename">converter.test.ts</span>
+        </div>
+        <div class="code-divider"></div>
+        <pre class="line-numbers"><code class="language-typescript">import { CurrencyConverter } from './converter';
 
-test('converts EUR to USD', () => {
-  const converter = new CurrencyConverter({ EUR: 1.1 });
-  expect(converter.convert(10, 'EUR')).toBe(11);
+test('converts EUR to USD at fixed rate', () => {
+  const converter = new CurrencyConverter({ EUR: 1.2 });
+  expect(converter.convert(10, 'EUR')).toBe(12);
 });
-        </code></pre>
+</code></pre>
+        </div>
 
-        <h4>Step 2: Make it pass</h4>
-        <pre><code>// converter.ts
-export class CurrencyConverter {
-  constructor(private rates: Record<string, number>) {}
+        <h4>Step 2: Make the test pass</h4>
+        <div class="code-window">
+          <div class="code-header">
+            <span class="code-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </span>
+            <span class="code-filename">converter.ts</span>
+          </div>
+          <div class="code-divider"></div>
+          <pre class="line-numbers"><code class="language-typescript">export class CurrencyConverter {
+  constructor(private rates: Record&lt;string, number&gt;) {}
 
   convert(amount: number, currency: string): number {
     return amount * this.rates[currency];
   }
 }
-        </code></pre>
+</code></pre>
+        </div>
 
-        <h4>Step 3: Add validation</h4>
-        <pre><code>// converter.test.ts
- test('throws if currency is unknown', () => {
-   const converter = new CurrencyConverter({ EUR: 1.1 });
-   expect(() => converter.convert(5, 'JPY')).toThrow('Unsupported currency');
- });
-        </code></pre>
+        <h4>Step 3: Add error handling</h4>
+        <div class="code-window">
+          <div class="code-header">
+            <span class="code-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </span>
+            <span class="code-filename">converter.test.ts</span>
+          </div>
+          <div class="code-divider"></div>
+          <pre class="line-numbers"><code class="language-typescript">test('throws error for unknown currency', () => {
+  const converter = new CurrencyConverter({ EUR: 1.2 });
+  expect(() => converter.convert(10, 'JPY')).toThrow('Unsupported currency');
+});
+</code></pre>
+        </div>
 
-        <h4>Step 4: Make it pass with error handling</h4>
-        <pre><code>// converter.ts
-convert(amount: number, currency: string): number {
-  if (!this.rates[currency]) {
-    throw new Error('Unsupported currency');
-  }
-  return amount * this.rates[currency];
+        <h4>Step 4: Implementation for validation</h4>
+        <div class="code-window">
+          <div class="code-header">
+            <span class="code-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </span>
+            <span class="code-filename">converter.ts</span>
+          </div>
+          <div class="code-divider"></div>
+          <pre class="line-numbers"><code class="language-typescript">convert(amount: number, currency: string): number {
+  const rate = this.rates[currency];
+  if (!rate) throw new Error('Unsupported currency');
+  return amount * rate;
 }
-        </code></pre>
+</code></pre>
+        </div>
 
-        <p>We now have a modular, testable service built iteratively through TDD. Each requirement is backed by a test, making changes safer and intent clearer.</p>
+        <h4>Step 5: Simulate external dependencies</h4>
+        <div class="code-window">
+          <div class="code-header">
+            <span class="code-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </span>
+            <span class="code-filename">converter.test.ts</span>
+          </div>
+          <div class="code-divider"></div>
+          <pre class="line-numbers"><code class="language-typescript">const mockApi = {
+  getRate: jest.fn().mockResolvedValue(1.2),
+};
+
+const converter = new CurrencyConverter(mockApi);
+const result = await converter.convertAsync(10, 'EUR');
+expect(result).toBe(12);
+</code></pre>
+        </div>
+
+        <h4>Step 6: Dependency injection for testability</h4>
+        <div class="code-window">
+          <div class="code-header">
+            <span class="code-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </span>
+            <span class="code-filename">converter.ts</span>
+          </div>
+          <div class="code-divider"></div>
+          <pre class="line-numbers"><code class="language-typescript">export class CurrencyConverter {
+  constructor(private api: { getRate(currency: string): Promise<number> }) {}
+
+  async convertAsync(amount: number, currency: string): Promise<number> {
+    const rate = await this.api.getRate(currency);
+    return amount * rate;
+  }
+}
+</code></pre>
+        </div>
+
+
+
+        <p>Test-Driven Development enabled the incremental evolution of a modular, testable service—starting with
+          synchronous
+          logic and progressively refactored into an asynchronous, mock-friendly architecture aligned
+          with modern application standards..</p>
+
 
         <h3 id="refactor-benefits" class="anchor">Why Developers Embrace TDD</h3>
         <ul>
-          <li><strong>Better design:</strong> Writing tests first forces you to define contracts and interfaces clearly.</li>
-          <li><strong>Fewer bugs:</strong> Edge cases and invalid inputs are captured early in the process.</li>
-          <li><strong>Smoother refactoring:</strong> With a robust test suite, you can safely change code without fear of breaking features.</li>
-          <li><strong>Faster debugging:</strong> When something breaks, a failing test tells you exactly where and why.</li>
-          <li><strong>Confidence:</strong> Developers (and stakeholders) can deploy with peace of mind.</li>
+          <li><strong>Better design:</strong> Tests force you to think about usage and API shape before writing
+            implementation.</li>
+          <li><strong>Fewer bugs:</strong> You handle edge cases and misuse up front, not after deployment.</li>
+          <li><strong>Smoother refactoring:</strong> With tests as a safety net, you can confidently refactor or
+            optimize.</li>
+          <li><strong>Faster debugging:</strong> When something breaks, failing tests highlight the issue immediately.
+          </li>
+          <li><strong>Living documentation:</strong> Tests show how the code is expected to behave and serve as
+            onboarding material.</li>
         </ul>
 
-        <h3 id="multi-language" class="anchor">TDD Across Languages: Java & C#</h3>
-        <p>TDD is equally effective in statically typed languages like Java and C#. In Java, developers often use JUnit, Mockito, and AssertJ to create expressive, isolated tests. In C#, tools like NUnit, xUnit, and Moq play similar roles, tightly integrated into IDEs like Visual Studio.</p>
+        <h3 id="multi-language" class="anchor">TDD Across Languages: Java, C# and Python</h3>
+        <p>While TDD shines in any environment, each language ecosystem brings its own tooling. Here's how it looks in
+          Java, C#, and Python:</p><br>
 
         <h4>Example in Java</h4>
-        <pre><code>import static org.junit.jupiter.api.Assertions.*;
+        <div class="code-window">
+          <div class="code-header">
+            <span class="code-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </span>
+            <span class="code-filename">CurrencyConverterTest.java</span>
+          </div>
+          <div class="code-divider"></div>
+          <pre class="line-numbers"><code class="language-java">import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 class CurrencyConverterTest {
   @Test
-  void convertsEURtoUSD() {
-    var rates = Map.of("EUR", 1.1);
-    var converter = new CurrencyConverter(rates);
-    assertEquals(11.0, converter.convert(10, "EUR"));
+  void throwsForMissingCurrency() {
+    var converter = new CurrencyConverter(Map.of("EUR", 1.1));
+    assertThrows(IllegalArgumentException.class, () -> {
+      converter.convert(5, "JPY");
+    });
   }
 }
-        </code></pre>
+</code></pre>
+        </div>
 
         <h4>Example in C#</h4>
-        <pre><code>using NUnit.Framework;
+        <div class="code-window">
+          <div class="code-header">
+            <span class="code-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </span>
+            <span class="code-filename">CurrencyConverterTests.cs</span>
+          </div>
+          <div class="code-divider"></div>
+          <pre class="line-numbers"><code class="language-csharp">using NUnit.Framework;
 
+[TestFixture]
 public class CurrencyConverterTests {
   [Test]
-  public void ConvertsEURtoUSD() {
-    var rates = new Dictionary<string, double> { {"EUR", 1.1} };
-    var converter = new CurrencyConverter(rates);
-    Assert.AreEqual(11.0, converter.Convert(10, "EUR"));
+  public void ThrowsForMissingCurrency() {
+    var converter = new CurrencyConverter(
+      new Dictionary&lt;string, double&gt;{{"EUR", 1.1}}
+    );
+    Assert.Throws&lt;ArgumentException&gt;(() =&gt; converter.Convert(5, "JPY"));
   }
 }
-        </code></pre>
+</code></pre>
+        </div>
 
-        <p>Regardless of language, the TDD pattern remains the same: start with behavior, prove it with a test, and implement only what’s needed.</p>
+        <h4>Example in Python</h4>
+        <div class="code-window">
+          <div class="code-header">
+            <span class="code-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </span>
+            <span class="code-filename">test_currency_converter.py</span>
+          </div>
+          <div class="code-divider"></div>
+          <pre class="line-numbers"><code class="language-python">import unittest
+
+class CurrencyConverterTest(unittest.TestCase):
+    def test_throws_for_unknown_currency(self):
+        converter = CurrencyConverter({"EUR": 1.1})
+        with self.assertRaises(ValueError):
+            converter.convert(5, "JPY")
+</code></pre>
+        </div>
+
+        <p>No matter the language, the core principles remain: tests come first, drive implementation, and improve code
+          quality.</p>
 
         <hr class="right-hr">
 
         <p id="conclusion">
-          TDD isn't just about writing tests—it's about changing how we approach problems. It helps us write software that's easier to maintain, easier to extend, and easier to trust. When paired with version control, CI pipelines, and peer code review, TDD becomes a cornerstone of modern professional software development. It turns doubt into confidence and complexity into clarity.
+          TDD isn't just about writing tests—it's about changing how we approach problems. It helps us write software
+          that's easier to maintain, easier to extend, and easier to trust. When paired with version control, CI
+          pipelines, and code reviews, TDD becomes a cornerstone of modern professional software development. It
+          elevates our mindset from reactive to proactive, turning vague ideas into executable, verifiable behavior.
         </p>
       </section>
     </section>
 
-        <div class="table-of-contents anchor">
-            <h3><strong>Test-Driven Development</strong> in Applications</h3>
-            <ol>
-                <li><a href="#intro" onclick="scrollToSection(event, 'intro')">Introduction</a></li>
-                <li><a href="#what-is-tdd" onclick="scrollToSection(event, 'what-is-tdd')">What is TDD?</a></li>
-                <li><a href="#example-js" onclick="scrollToSection(event, 'example-js')">TDD Example (JavaScript)</a></li>
-                <li><a href="#refactor-benefits" onclick="scrollToSection(event, 'refactor-benefits')">Benefits of TDD</a></li>
-                <li><a href="#multi-language" onclick="scrollToSection(event, 'multi-language')">TDD in Java and C#</a></li>
-                <li><a href="#conclusion" onclick="scrollToSection(event, 'conclusion')">Conclusion</a></li>
-            </ol>
-        </div>
-    </main>
+    <div class="table-of-contents anchor">
+      <h3><strong>Test-Driven Development</strong> in Applications</h3>
+      <ol>
+        <li><a href="#intro" onclick="scrollToSection(event, 'intro')">Introduction</a></li>
+        <li><a href="#what-is-tdd" onclick="scrollToSection(event, 'what-is-tdd')">What is TDD?</a></li>
+        <li><a href="#example-js" onclick="scrollToSection(event, 'example-js')">TDD Example (JavaScript)</a></li>
+        <li><a href="#refactor-benefits" onclick="scrollToSection(event, 'refactor-benefits')">Benefits of TDD</a></li>
+        <li><a href="#multi-language" onclick="scrollToSection(event, 'multi-language')">TDD in Java and C#</a></li>
+        <li><a href="#conclusion" onclick="scrollToSection(event, 'conclusion')">Conclusion</a></li>
+      </ol>
+    </div>
+  </main>
 
-    <footer>
-        <p class="footer-text">&copy; 2024 Ignarts. All rights reserved.</p>
-        <p class="footer-text">
-            Created with passion by <strong>Ignacio Meléndez Uriz</strong>,
-            videogame and multiplatform application developer and creativity lover.
-        </p>
-        <p class="footer-text">
-            Do you have an interesting project? Let's talk!
-            <a href="mailto:ignarts.dev@gmail.com" target="_blank">ignarts.dev@gmail.com</a>
-        </p>
-    </footer>
+  <footer>
+    <p class="footer-text">&copy; 2024 Ignarts. All rights reserved.</p>
+    <p class="footer-text">
+      Created with passion by <strong>Ignacio Meléndez Uriz</strong>,
+      videogame and multiplatform application developer and creativity lover.
+    </p>
+    <p class="footer-text">
+      Do you have an interesting project? Let's talk!
+      <a href="mailto:ignarts.dev@gmail.com" target="_blank">ignarts.dev@gmail.com</a>
+    </p>
+  </footer>
 
-    <div class="overlay"></div>
+  <div class="overlay"></div>
 
 </body>
 
 <script src="../Code/SmoothScroll.js"></script>
 <script src="../Code/ImageScaler.js"></script>
+
 </html>
